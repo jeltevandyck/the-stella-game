@@ -17,6 +17,7 @@ namespace The_Stella_Game.Menus
         public override void Initialize()
         {
             //Sprites.Add(new StellaPlayer(Content));
+            //Change
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
