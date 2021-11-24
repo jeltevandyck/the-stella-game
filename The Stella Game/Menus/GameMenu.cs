@@ -16,7 +16,6 @@ namespace The_Stella_Game.Menus
 
         public override void Initialize()
         {
-
         }
     }
 }

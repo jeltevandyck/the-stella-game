@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace The_Stella_Game.Sprites
 {
-    public abstract class Sprite
+    public abstract class Sprite : IGObject
     {
         public ContentManager Content { get; private set; }
         public Texture2D Texture;

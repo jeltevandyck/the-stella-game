@@ -16,14 +16,11 @@ namespace The_Stella_Game.Menus
 
         public override void Initialize()
         {
-            //Sprites.Add(new StellaPlayer(Content));
-            //Change
+            SpriteObjects.Add(new StellaPlayer(Content));
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            
-
             base.Draw(gameTime, spriteBatch);
         }
     }

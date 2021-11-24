@@ -18,6 +18,8 @@ namespace The_Stella_Game
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
+            _graphics.PreferredBackBufferWidth = MAX_WIDTH;
+            _graphics.PreferredBackBufferHeight = MAX_HEIGHT;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -53,8 +55,12 @@ namespace The_Stella_Game
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
+            _spriteBatch.Begin();
+
             // TODO: Add your drawing code here
             menu.Draw(gameTime, _spriteBatch);
+
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }

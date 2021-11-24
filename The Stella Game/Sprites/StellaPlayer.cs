@@ -8,15 +8,21 @@ using Microsoft.Xna.Framework.Input;
 
 namespace The_Stella_Game.Sprites
 {
-    public class StellaPlayer : Entity
+    public class StellaPlayer : AnimationEntity
     {
         public int Health { get; private set; } = 3;
 
         public StellaPlayer(ContentManager contentManager) : base(contentManager)
         {
-            this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\stella-glass-idle");
+            this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaEmptyGlassSideways");
             this.Position = new Vector2(0, 0);
-            this.CollisionBox = new Rectangle((int) Position.X, (int) Position.Y, 50, 94);
+            this.CollisionBox = new Rectangle((int) Position.X, (int) Position.Y, 100, 100);
+
+
+            this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 99)));
+            this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 99)));
+            this.Add(new AnimationFrame(new Rectangle(200, 0, 100, 99)));
+            this.Add(new AnimationFrame(new Rectangle(300, 0, 100, 99)));
         }
 
         public override void Move()
@@ -31,18 +37,15 @@ namespace The_Stella_Game.Sprites
             if (state.IsKeyDown(Keys.Q))
             {
                 Velocity.X = -Speed; //LEFT
-                this.Texture = Content.Load<Texture2D>("Sprites\\Player\\stella-glass-left");
             }
             if (state.IsKeyDown(Keys.D))
             {
                 Velocity.X = Speed; //RIGHT
-                this.Texture = Content.Load<Texture2D>("Sprites\\Player\\stella-glass-right");
             }
             if (state.GetPressedKeys().Length <= 0)
             {
                 Velocity.X = 0;
                 Velocity.Y = 0;
-                this.Texture = Content.Load<Texture2D>("Sprites\\Player\\stella-glass-idle");
             }
 
             Position += Velocity;
@@ -51,6 +54,8 @@ namespace The_Stella_Game.Sprites
         public override void Update(GameTime gameTime)
         {
             this.Move();
+
+            base.Update(gameTime);
         }
     }
 }
