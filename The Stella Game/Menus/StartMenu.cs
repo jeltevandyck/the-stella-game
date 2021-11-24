@@ -16,6 +16,16 @@ namespace The_Stella_Game.Menus
 
         public override void Initialize()
         {
+            SpriteObjects.Add(new Coin(Content, 50));
+
+            MiniBoss heineken = new MiniBoss(Content, "SpriteSheetHeinekenSideways", new Vector2(100, 0));
+            heineken.WalkRange = 400;
+            heineken.Speed = 3f;
+
+            SpriteObjects.Add(heineken);
+            //SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetCristalSideways"));
+            //SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetMaesSideways"));
+
             SpriteObjects.Add(new StellaPlayer(Content));
         }
 

@@ -4,10 +4,18 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Coin/SpriteSheetCoin.png</File>
+    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetCristalSideways.png</File>
+    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetHeinekenSideways.png</File>
+    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetMaesSideways.png</File>
     <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaEmptyGlassSideways.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Player/StellaGlass.png</File>
+    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaQuarterGlassSideWays.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

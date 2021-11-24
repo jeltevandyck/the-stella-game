@@ -12,7 +12,7 @@ namespace The_Stella_Game.Sprites
         public ContentManager Content { get; private set; }
         public Texture2D Texture;
         public Vector2 Position;
-        public Rectangle CollisionBox;
+        public Rectangle Rectangle;
 
         public Boolean Collidable = false;
 
@@ -33,7 +33,7 @@ namespace The_Stella_Game.Sprites
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(Texture, Position, CollisionBox, Color.White);
+            spriteBatch.Draw(Texture, Position, Rectangle, Color.White);
         }
     }
 }

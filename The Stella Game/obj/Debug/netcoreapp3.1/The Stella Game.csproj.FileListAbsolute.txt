@@ -36,5 +36,9 @@ C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.pdb
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.genruntimeconfig.cache
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\stella-glass-idle.xnb
-C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\StellaGlass.xnb
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaEmptyGlassSideways.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaQuarterGlassSideWays.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Coin\SpriteSheetCoin.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetCristalSideways.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetHeinekenSideways.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetMaesSideways.xnb
