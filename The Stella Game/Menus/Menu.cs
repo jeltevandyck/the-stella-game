@@ -18,30 +18,30 @@ namespace The_Stella_Game.Menus
 
         public GraphicsDeviceManager Graphics { get; private set; }
 
-        public List<Sprite> Sprites { get; private set; }
+        public List<IGObject> SpriteObjects { get; private set; }
 
         public Menu(GraphicsDeviceManager graphics, ContentManager content)
         {
             this.Graphics = graphics;
             Content = content;
 
-            Sprites = new List<Sprite>();
+            SpriteObjects = new List<IGObject>();
         }
 
         public abstract void Initialize();
 
         public virtual void Update(GameTime gameTime)
         {
-            foreach (Sprite sprite in Sprites)
+            foreach (IGObject obj in SpriteObjects)
             {
-                sprite.Update(gameTime);
+                obj.Update(gameTime);
             }
         }
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            foreach (Sprite sprite in Sprites)
+            foreach (IGObject obj in SpriteObjects)
             {
-                sprite.Draw(gameTime, spriteBatch);
+                obj.Draw(gameTime, spriteBatch);
             }
         }
     }
