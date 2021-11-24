@@ -7,18 +7,24 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace The_Stella_Game.Sprites
 {
-    public class Coin : Sprite
+    public class Coin : SpriteAnimation
     {
         public decimal Coins;
         public Coin(ContentManager content, decimal coins) : base(content) {
             this.Coins = coins;
-            this.Texture = content.Load<Texture2D>("Sprites\\Coin\\coin_idle");
-            this.Position = new Vector2(200, 200);
+            this.Texture = content.Load<Texture2D>("Sprites\\Coin\\SpriteSheetCoin");
+            
+            this.Position = new Vector2(200, 0);
+
+            this.Add(new AnimationFrame(new Rectangle(0, 0, 50, 50)));
+            this.Add(new AnimationFrame(new Rectangle(50, 0, 50, 50)));
+            this.Add(new AnimationFrame(new Rectangle(100, 0, 50, 50)));
+            this.Add(new AnimationFrame(new Rectangle(150, 0, 50, 50)));
         }
 
         public override void Update(GameTime gameTime)
         {
-
+            base.Update(gameTime);
         }
     }
 }

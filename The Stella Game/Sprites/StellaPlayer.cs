@@ -11,12 +11,15 @@ namespace The_Stella_Game.Sprites
     public class StellaPlayer : AnimationEntity
     {
         public int Health { get; private set; } = 3;
+        public int Quantity { get; private set; } = 1;
+
+        public decimal Coins { get; private set; } = 0;
 
         public StellaPlayer(ContentManager contentManager) : base(contentManager)
         {
             this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaEmptyGlassSideways");
             this.Position = new Vector2(0, 0);
-            this.CollisionBox = new Rectangle((int) Position.X, (int) Position.Y, 100, 100);
+            this.Rectangle = new Rectangle((int) Position.X, (int) Position.Y, 100, 100);
 
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 99)));
@@ -27,14 +30,15 @@ namespace The_Stella_Game.Sprites
 
         public override void Move()
         {
-             KeyboardState state = Keyboard.GetState();
+            KeyboardState state = Keyboard.GetState();
 
             if (state.IsKeyDown(Keys.LeftControl)) Speed = 5f;
             else Speed = 3f;
 
-            if (state.IsKeyDown(Keys.Z)) Velocity.Y = -Speed; //UP
-            if (state.IsKeyDown(Keys.S)) Velocity.Y = Speed; //DOWN
-            if (state.IsKeyDown(Keys.Q))
+            //if (state.IsKeyDown(Keys.Z)) Velocity.Y = -Speed; //UP
+            //if (state.IsKeyDown(Keys.S)) Velocity.Y = Speed; //DOWN
+
+            if (state.IsKeyDown(Keys.Q)) 
             {
                 Velocity.X = -Speed; //LEFT
             }

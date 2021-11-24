@@ -13,6 +13,54 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Sprites/Coin/SpriteSheetCoin.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Coin/SpriteSheetCoin.png
+
+#begin Sprites/Miniboss/SpriteSheetCristalSideways.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Miniboss/SpriteSheetCristalSideways.png
+
+#begin Sprites/Miniboss/SpriteSheetHeinekenSideways.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Miniboss/SpriteSheetHeinekenSideways.png
+
+#begin Sprites/Miniboss/SpriteSheetMaesSideways.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Miniboss/SpriteSheetMaesSideways.png
+
 #begin Sprites/Player/SpriteSheetStellaEmptyGlassSideways.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -25,7 +73,7 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/Player/SpriteSheetStellaEmptyGlassSideways.png
 
-#begin Sprites/Player/StellaGlass.png
+#begin Sprites/Player/SpriteSheetStellaQuarterGlassSideWays.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,5 +83,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sprites/Player/StellaGlass.png
+/build:Sprites/Player/SpriteSheetStellaQuarterGlassSideWays.png
 
