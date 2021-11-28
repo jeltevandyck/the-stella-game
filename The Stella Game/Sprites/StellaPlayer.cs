@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using The_Stella_Game.Framework;
+using System.Diagnostics;
 
 namespace The_Stella_Game.Sprites
 {
@@ -19,7 +20,8 @@ namespace The_Stella_Game.Sprites
         {
             this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaQuarterGlassSideWays");
             this.Position = new Vector2(0, 0);
-            this.Rectangle = new Rectangle((int) Position.X, (int) Position.Y, 100, 100);
+
+            this.CollisionBox = new Rectangle((int) Position.X, (int) Position.Y, 100, 99);
 
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 99)));
@@ -28,7 +30,7 @@ namespace The_Stella_Game.Sprites
             this.Add(new AnimationFrame(new Rectangle(300, 0, 100, 99)));
         }
 
-        public override void Move()
+        public override void Move(List<IGObject> gObjects)
         {
             KeyboardState state = Keyboard.GetState();
 
@@ -43,14 +45,34 @@ namespace The_Stella_Game.Sprites
                 Velocity.Y = 0;
             }
 
+            foreach (IGObject obj in gObjects)
+            {
+                if (!(obj is Sprite)) continue;
+                Sprite sprite = obj as Sprite;
+
+
+                if (sprite.Intersects(this) && !sprite.Collidable)
+                {
+                    Debug.WriteLine("Collision!!");
+                    Velocity.X = 0;
+                    Velocity.Y = 0;
+                }
+            }
+
             Position += Velocity;
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
-            this.Move();
+            this.Move(gObjects);
+            
+          
+            base.Update(gameTime, gObjects);
+        }
 
-            base.Update(gameTime);
+        public override string ToString()
+        {
+            return "StellaPlayer";
         }
     }
 }

@@ -15,6 +15,6 @@ namespace The_Stella_Game.Framework
 
         }
 
-        public abstract void Move();
+        public abstract void Move(List<IGObject> gObjects);
     }
 }

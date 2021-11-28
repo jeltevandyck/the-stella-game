@@ -14,8 +14,11 @@ namespace The_Stella_Game.Sprites
         public Coin(ContentManager content, decimal coins) : base(content) {
             this.Coins = coins;
             this.Texture = content.Load<Texture2D>("Sprites\\Coin\\SpriteSheetCoin");
-            
+
+            this.Collidable = false;
+
             this.Position = new Vector2(200, 0);
+            this.CollisionBox = new Rectangle((int) Position.X,(int) Position.Y, 50, 50);
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 50, 50)));
             this.Add(new AnimationFrame(new Rectangle(50, 0, 50, 50)));
@@ -23,9 +26,9 @@ namespace The_Stella_Game.Sprites
             this.Add(new AnimationFrame(new Rectangle(150, 0, 50, 50)));
         }
 
-        public override void Update(GameTime gameTime)
+        public override string ToString()
         {
-            base.Update(gameTime);
+            return "Coin";
         }
     }
 }

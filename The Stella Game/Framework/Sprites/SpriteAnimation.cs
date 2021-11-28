@@ -26,7 +26,7 @@ namespace The_Stella_Game.Framework
             CurrentFrame = _animationFrames[0];
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
             CurrentFrame = _animationFrames[index];
 
@@ -38,6 +38,8 @@ namespace The_Stella_Game.Framework
             }
 
             if (index >= _animationFrames.Count) index = 0;
+
+            base.Update(gameTime, gObjects);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
