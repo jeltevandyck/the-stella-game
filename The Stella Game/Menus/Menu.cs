@@ -34,7 +34,7 @@ namespace The_Stella_Game.Menus
         {
             foreach (IGObject obj in SpriteObjects)
             {
-                obj.Update(gameTime);
+                obj.Update(gameTime, SpriteObjects);
             }
         }
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)

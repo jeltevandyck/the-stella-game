@@ -8,7 +8,7 @@ namespace The_Stella_Game.Framework
 {
     public interface IGObject
     {
-        void Update(GameTime gameTime);
+        void Update(GameTime gameTime, List<IGObject> gObjects);
 
         void Draw(GameTime gameTime, SpriteBatch spriteBatch);
     }

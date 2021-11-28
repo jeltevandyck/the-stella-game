@@ -22,7 +22,7 @@ namespace The_Stella_Game.Sprites
             this.SpawnPosition = spawnPosition;
             this.Texture = content.Load<Texture2D>("Sprites\\Miniboss\\" + sheet);
             this.Position = spawnPosition;
-            //this.Rectangle = new Rectangle((int)Position.X, (int)Position.Y, 100, 100);
+            this.CollisionBox = new Rectangle((int)Position.X, (int)Position.Y, 100, 100);
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 100)));
             this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 100)));
@@ -32,7 +32,7 @@ namespace The_Stella_Game.Sprites
       
         }
 
-        public override void Move()
+        public override void Move(List<IGObject> gObjects)
         {
             float walkedDistance = (Position.X - SpawnPosition.X) + Speed;
             if (walkedDistance <= WalkRange && !_backToSpawn)
@@ -50,11 +50,16 @@ namespace The_Stella_Game.Sprites
             Position += Velocity;
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
-            this.Move();
+            this.Move(gObjects);
 
-            base.Update(gameTime);
+            base.Update(gameTime, gObjects);
+        }
+
+        public override string ToString()
+        {
+            return "Miniboss";
         }
     }
 }
