@@ -9,11 +9,14 @@ namespace The_Stella_Game.Framework
 {
     public class SpriteAnimation : Sprite
     {
+        public GraphicsDeviceManager Graphics { get; private set; }
         public AnimationFrame CurrentFrame { get; private set; }
         private List<AnimationFrame> _animationFrames;
 
         private int index = 0;
         private double frameMovement = 0;
+
+        private Texture2D RectangleTexture;
 
         public SpriteAnimation(ContentManager content) : base(content)
         {
@@ -42,9 +45,36 @@ namespace The_Stella_Game.Framework
             base.Update(gameTime, gObjects);
         }
 
+        public void SetRectangleTexture(GraphicsDevice graphicsDevice, Texture2D texture)
+        {
+            var colours = new List<Color>();
+
+            for (int y = 0; y < CollisionBox.Height; y++)
+            {
+                for (int x = 0; x < CollisionBox.Width; x++)
+                {
+                    if (y == 0 || // On the top
+                        x == 0 || // On the left
+                        y == texture.Height - 1 || // on the bottom
+                        x == texture.Width - 1) // on the right
+                    {
+                        colours.Add(new Color(255, 255, 255, 255)); // white
+                    }
+                    else
+                    {
+                        colours.Add(new Color(0, 0, 0, 0)); // transparent 
+                    }
+                }
+            }
+
+            RectangleTexture = new Texture2D(graphicsDevice, CollisionBox.Width, CollisionBox.Height);
+            RectangleTexture.SetData<Color>(colours.ToArray());
+        }
+
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(Texture, Position, CurrentFrame.Rectangle, Color.White, 0, new Vector2(0, 0), 0.5f, SpriteEffects.None, 0);
+            spriteBatch.Draw(Texture, Position, CurrentFrame.Rectangle, Color.White, 0, new Vector2(0, 0), .7f, SpriteEffects.None, 0);
+            spriteBatch.Draw(RectangleTexture, new Vector2(CollisionBox.X, CollisionBox.Y), Color.Red);
         }
     }
 }

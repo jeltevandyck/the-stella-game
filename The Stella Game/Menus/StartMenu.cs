@@ -16,12 +16,17 @@ namespace The_Stella_Game.Menus
 
         public override void Initialize()
         {
-            SpriteObjects.Add(new Coin(Content, 50));
+            Coin coin = new Coin(Content, 50);
+            coin.SetRectangleTexture(Graphics.GraphicsDevice, coin.Texture);
+            SpriteObjects.Add(coin);
 
+            MiniBoss miniBoss = new MiniBoss(Content, "SpriteSheetMaesSideways", new Vector2(300,10));
+            miniBoss.SetRectangleTexture(Graphics.GraphicsDevice, miniBoss.Texture);
+            SpriteObjects.Add(miniBoss);
 
-            SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetMaesSideways", new Vector2(300, 10)));
-
-            SpriteObjects.Add(new StellaPlayer(Content));
+            StellaPlayer stella = new StellaPlayer(Content);
+            stella.SetRectangleTexture(Graphics.GraphicsDevice, stella.Texture);
+            SpriteObjects.Add(stella);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

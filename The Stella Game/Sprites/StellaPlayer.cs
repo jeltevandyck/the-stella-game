@@ -21,7 +21,8 @@ namespace The_Stella_Game.Sprites
             this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaQuarterGlassSideWays");
             this.Position = new Vector2(0, 0);
 
-            this.CollisionBox = new Rectangle((int) Position.X, (int) Position.Y, 100, 99);
+            this.CollisionBox_X_Extra = 20;
+            this.CollisionBox = new Rectangle((int) Position.X, (int) Position.Y, 35, 65);
 
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 99)));
@@ -37,36 +38,36 @@ namespace The_Stella_Game.Sprites
             if (state.IsKeyDown(Keys.LeftControl)) Speed = 5f;
             else Speed = 3f;
 
+            if (state.IsKeyDown(Keys.Z)) Velocity.Y = -Speed; //UP
+            if (state.IsKeyDown(Keys.S)) Velocity.Y = Speed; //DOWN
+
             if (state.IsKeyDown(Keys.Q)) Velocity.X = -Speed; //LEFT
             if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; //RIGHT
-            if (state.GetPressedKeys().Length <= 0)
-            {
-                Velocity.X = 0;
-                Velocity.Y = 0;
-            }
-
-            foreach (IGObject obj in gObjects)
-            {
-                if (!(obj is Sprite)) continue;
-                Sprite sprite = obj as Sprite;
-
-
-                if (sprite.Intersects(this) && !sprite.Collidable)
-                {
-                    Debug.WriteLine("Collision!!");
-                    Velocity.X = 0;
-                    Velocity.Y = 0;
-                }
-            }
-
-            Position += Velocity;
         }
 
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
             this.Move(gObjects);
-            
-          
+
+            foreach (IGObject obj in gObjects)
+            {
+                Sprite sprite = obj as Sprite;
+                if (sprite.Equals(this)) continue;
+
+                if (((this.Velocity.X > 0 && this.IsTouchingLeft(sprite)) ||
+                    (this.Velocity.X < 0 & this.IsTouchingRight(sprite))) && !sprite.Collidable)
+                    this.Velocity.X = 0;
+
+                if (((this.Velocity.Y > 0 && this.IsTouchingTop(sprite)) ||
+                    (this.Velocity.Y < 0 & this.IsTouchingBottom(sprite))) && !sprite.Collidable)
+                    this.Velocity.Y = 0;
+
+                Position += Velocity;
+
+                Velocity = Vector2.Zero;
+            }
+
+
             base.Update(gameTime, gObjects);
         }
 

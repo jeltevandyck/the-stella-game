@@ -19,6 +19,8 @@ namespace The_Stella_Game.Sprites
 
         public MiniBoss(ContentManager content, string sheet, Vector2 spawnPosition) : base(content)
         {
+            this.Collidable = false;
+
             this.SpawnPosition = spawnPosition;
             this.Texture = content.Load<Texture2D>("Sprites\\Miniboss\\" + sheet);
             this.Position = spawnPosition;
@@ -28,8 +30,6 @@ namespace The_Stella_Game.Sprites
             this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 100)));
             this.Add(new AnimationFrame(new Rectangle(200, 0, 100, 100)));
             this.Add(new AnimationFrame(new Rectangle(300, 0, 100, 100)));
-
-      
         }
 
         public override void Move(List<IGObject> gObjects)
