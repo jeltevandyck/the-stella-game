@@ -27,7 +27,7 @@ namespace The_Stella_Game
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            menu = new StartMenu(_graphics, Content);
+            menu = new GameMenu(_graphics, Content);
             menu.Initialize();
 
             base.Initialize();

@@ -54,7 +54,6 @@ namespace The_Stella_Game.Sprites
         public override void Update(GameTime gameTime)
         {
             this.Move();
-
             base.Update(gameTime);
         }
     }

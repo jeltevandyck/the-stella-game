@@ -4,8 +4,8 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaEmptyGlassSideways.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Player/StellaGlass.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaEmptyGlassSideways.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Player/StellaGlass.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
