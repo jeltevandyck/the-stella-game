@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Content;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using The_Stella_Game.Framework;
 
 namespace The_Stella_Game.Sprites
 {

@@ -4,10 +4,34 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Buttons/BackButton.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Buttons/Level1Button.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Buttons/Level2Button.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Buttons/LevelsButton.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Buttons/QuitButton.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Buttons/StartButton.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Coin/SpriteSheetCoin.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Menu/StellaLevelsScherm.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Menu/StellaStartScherm.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetCristalSideways.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetHeinekenSideways.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetMaesSideways.png</File>
     <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaEmptyGlassSideways.png</File>
-    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Player/StellaGlass.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV2/the-stella-game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaQuarterGlassSideWays.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

@@ -13,7 +13,13 @@ namespace The_Stella_Game
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        private Menu menu;  
+        private Menu currentMenu;
+        private Menu nextMenu;
+
+        public void changeMenu(Menu menu)
+        {
+            nextMenu = menu;
+        }
 
         public Game1()
         {
@@ -21,32 +27,33 @@ namespace The_Stella_Game
             _graphics.PreferredBackBufferWidth = MAX_WIDTH;
             _graphics.PreferredBackBufferHeight = MAX_HEIGHT;
             Content.RootDirectory = "Content";
-            IsMouseVisible = true;
+
         }
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-            menu = new GameMenu(_graphics, Content);
-            menu.Initialize();
+            IsMouseVisible = true;
 
             base.Initialize();
+            
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            // TODO: use this.Content to load your game content here
+            currentMenu = new GameMenu(this,_graphics, Content);
+            
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
 
-            // TODO: Add your update logic here
-            menu.Update(gameTime);
+            if (nextMenu != null)
+            {
+                currentMenu = nextMenu;
+                nextMenu = null;
+            }
+            currentMenu.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -55,12 +62,7 @@ namespace The_Stella_Game
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            _spriteBatch.Begin();
-
-            // TODO: Add your drawing code here
-            menu.Draw(gameTime, _spriteBatch);
-
-            _spriteBatch.End();
+            currentMenu.Draw(gameTime, _spriteBatch);
 
             base.Draw(gameTime);
         }

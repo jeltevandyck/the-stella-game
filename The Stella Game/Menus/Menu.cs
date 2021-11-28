@@ -4,8 +4,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using The_Stella_Game.Sprites;
 using Microsoft.Xna.Framework.Content;
+using The_Stella_Game.Framework;
 
 namespace The_Stella_Game.Menus
 {
@@ -14,27 +14,30 @@ namespace The_Stella_Game.Menus
         public int MaxWidth = 1700;
         public int MaxHeight = 900;
 
+        public bool IsMouseVisible { get; set; }
         public ContentManager Content { get; private set; }
 
         public GraphicsDeviceManager Graphics { get; private set; }
 
         public List<IGObject> SpriteObjects { get; private set; }
 
-        public Menu(GraphicsDeviceManager graphics, ContentManager content)
+        public Game1 Game { get; private set; }
+
+        public Menu(Game1 game, GraphicsDeviceManager graphics, ContentManager content)
         {
             this.Graphics = graphics;
             Content = content;
+            Game = game;
 
             SpriteObjects = new List<IGObject>();
         }
 
-        public abstract void Initialize();
 
         public virtual void Update(GameTime gameTime)
         {
             foreach (IGObject obj in SpriteObjects)
             {
-                obj.Update(gameTime);
+                obj.Update(gameTime, SpriteObjects);
             }
         }
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -44,5 +47,7 @@ namespace The_Stella_Game.Menus
                 obj.Draw(gameTime, spriteBatch);
             }
         }
+
+        
     }
 }

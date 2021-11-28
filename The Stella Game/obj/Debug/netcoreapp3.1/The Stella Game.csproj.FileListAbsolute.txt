@@ -36,11 +36,62 @@ C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.pdb
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.genruntimeconfig.cache
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\stella-glass-idle.xnb
-C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\StellaGlass.xnb
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaEmptyGlassSideways.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaQuarterGlassSideWays.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Coin\SpriteSheetCoin.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetCristalSideways.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetHeinekenSideways.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetMaesSideways.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\stella-glass-idle.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Coin\SpriteSheetCoin.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetCristalSideways.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetHeinekenSideways.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetMaesSideways.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaEmptyGlassSideways.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaQuarterGlassSideWays.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.exe
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.deps.json
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.runtimeconfig.json
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.runtimeconfig.dev.json
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.pdb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Microsoft.VisualBasic.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.Direct2D1.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.Direct3D11.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.Direct3D9.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.DXGI.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.Mathematics.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.MediaFoundation.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.XAudio2.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.XInput.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\debian-x64\native\libuv.so
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\fedora-x64\native\libuv.so
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\opensuse-x64\native\libuv.so
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\osx\native\libuv.dylib
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\rhel-x64\native\libuv.so
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-arm\native\libuv.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\libuv.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\libuv.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.csproj.AssemblyReference.cache
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.AssemblyInfoInputs.cache
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.AssemblyInfo.cs
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.csproj.CoreCompileInputs.cache
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.pdb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.genruntimeconfig.cache
 C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\stella-glass-idle.xnb
+C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Coin\SpriteSheetCoin.xnb
+C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetCristalSideways.xnb
+C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetHeinekenSideways.xnb
+C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetMaesSideways.xnb
 C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaEmptyGlassSideways.xnb
-C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\StellaGlass.xnb
+C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaQuarterGlassSideWays.xnb
 C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.exe
 C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.deps.json
 C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.runtimeconfig.json
@@ -77,3 +128,54 @@ C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\obj\Deb
 C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.dll
 C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.pdb
 C:\Users\sonia\Documents\TheStellaGameV2\the-stella-game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.genruntimeconfig.cache
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\stella-glass-idle.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Coin\SpriteSheetCoin.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetCristalSideways.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetHeinekenSideways.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetMaesSideways.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaEmptyGlassSideways.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaQuarterGlassSideWays.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.exe
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.deps.json
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.runtimeconfig.json
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.runtimeconfig.dev.json
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.pdb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Microsoft.VisualBasic.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.Direct2D1.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.Direct3D11.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.Direct3D9.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.DXGI.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.Mathematics.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.MediaFoundation.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.XAudio2.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.XInput.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\debian-x64\native\libuv.so
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\fedora-x64\native\libuv.so
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\opensuse-x64\native\libuv.so
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\osx\native\libuv.dylib
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\rhel-x64\native\libuv.so
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-arm\native\libuv.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\libuv.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\libuv.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.csproj.AssemblyReference.cache
+C:\Users\sonia\Desktop\Test\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sonia\Desktop\Test\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.AssemblyInfoInputs.cache
+C:\Users\sonia\Desktop\Test\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.AssemblyInfo.cs
+C:\Users\sonia\Desktop\Test\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.csproj.CoreCompileInputs.cache
+C:\Users\sonia\Desktop\Test\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.dll
+C:\Users\sonia\Desktop\Test\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.pdb
+C:\Users\sonia\Desktop\Test\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.genruntimeconfig.cache
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Buttons\LevelsButton.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Buttons\StartButton.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Menu\StellaStartScherm.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Buttons\Level1Button.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Buttons\Level2Button.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Menu\StellaLevelsScherm.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Buttons\QuitButton.xnb
+C:\Users\sonia\Desktop\Test\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Buttons\BackButton.xnb

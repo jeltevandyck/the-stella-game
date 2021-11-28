@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
+using The_Stella_Game.Framework;
 
 namespace The_Stella_Game.Sprites
 {
@@ -17,9 +18,11 @@ namespace The_Stella_Game.Sprites
             this.Texture = content.Load<Texture2D>("Sprites\\BackGround\\" + backgroundName);
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
         }
+
+
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
