@@ -4,9 +4,8 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using The_Stella_Game.Sprites;
 
-namespace The_Stella_Game.Sprites
+namespace The_Stella_Game.Framework
 {
     public class SpriteAnimation : Sprite
     {

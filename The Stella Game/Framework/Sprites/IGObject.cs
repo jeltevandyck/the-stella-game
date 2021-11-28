@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace The_Stella_Game.Sprites
+namespace The_Stella_Game.Framework
 {
     public interface IGObject
     {

@@ -4,8 +4,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using The_Stella_Game.Sprites;
 using Microsoft.Xna.Framework.Content;
+using The_Stella_Game.Framework;
 
 namespace The_Stella_Game.Menus
 {

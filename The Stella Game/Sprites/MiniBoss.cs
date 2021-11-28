@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using The_Stella_Game.Framework;
 
 namespace The_Stella_Game.Sprites
 {
@@ -33,7 +34,7 @@ namespace The_Stella_Game.Sprites
 
         public override void Move()
         {
-            float walkedDistance = (Position.X - SpawnPosition.X);
+            float walkedDistance = (Position.X - SpawnPosition.X) + Speed;
             if (walkedDistance <= WalkRange && !_backToSpawn)
             {
                 Velocity.X = Speed;
@@ -43,7 +44,7 @@ namespace The_Stella_Game.Sprites
             {
                 Velocity.X = -Speed;
 
-                if (Position.X == SpawnPosition.X) _backToSpawn = false;
+                if (Position.X <= SpawnPosition.X) _backToSpawn = false;
             }
 
             Position += Velocity;

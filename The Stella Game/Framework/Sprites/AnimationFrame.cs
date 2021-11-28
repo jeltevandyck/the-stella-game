@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace The_Stella_Game.Sprites
+namespace The_Stella_Game.Framework
 {
     public class AnimationFrame
     {

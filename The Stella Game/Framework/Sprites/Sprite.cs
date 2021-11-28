@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace The_Stella_Game.Sprites
+namespace The_Stella_Game.Framework
 {
     public abstract class Sprite : IGObject
     {

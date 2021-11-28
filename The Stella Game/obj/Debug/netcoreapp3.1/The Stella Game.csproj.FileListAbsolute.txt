@@ -42,3 +42,46 @@ C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetCristalSideways.xnb
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetHeinekenSideways.xnb
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetMaesSideways.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\stella-glass-idle.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Coin\SpriteSheetCoin.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetCristalSideways.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetHeinekenSideways.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Miniboss\SpriteSheetMaesSideways.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaEmptyGlassSideways.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaQuarterGlassSideWays.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.exe
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.deps.json
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.runtimeconfig.json
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.runtimeconfig.dev.json
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\The Stella Game.pdb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Microsoft.VisualBasic.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.Direct2D1.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.Direct3D11.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.Direct3D9.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.DXGI.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.Mathematics.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.MediaFoundation.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.XAudio2.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\SharpDX.XInput.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\debian-x64\native\libuv.so
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\fedora-x64\native\libuv.so
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\opensuse-x64\native\libuv.so
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\osx\native\libuv.dylib
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\rhel-x64\native\libuv.so
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-arm\native\libuv.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\libuv.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\libuv.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.csproj.AssemblyReference.cache
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.AssemblyInfoInputs.cache
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.AssemblyInfo.cs
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.csproj.CoreCompileInputs.cache
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.dll
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.pdb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.genruntimeconfig.cache

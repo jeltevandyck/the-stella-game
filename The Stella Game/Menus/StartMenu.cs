@@ -18,13 +18,14 @@ namespace The_Stella_Game.Menus
         {
             SpriteObjects.Add(new Coin(Content, 50));
 
-            MiniBoss heineken = new MiniBoss(Content, "SpriteSheetHeinekenSideways", new Vector2(100, 0));
+            MiniBoss heineken = new MiniBoss(Content, "SpriteSheetHeinekenSideways", new Vector2(100, 10));
             heineken.WalkRange = 400;
-            heineken.Speed = 3f;
+            heineken.Speed = 1f;
 
             SpriteObjects.Add(heineken);
-            //SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetCristalSideways"));
-            //SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetMaesSideways"));
+
+            SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetCristalSideways", new Vector2(200, 10)));
+            SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetMaesSideways", new Vector2(300, 10)));
 
             SpriteObjects.Add(new StellaPlayer(Content));
         }
