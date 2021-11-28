@@ -15,10 +15,10 @@ namespace The_Stella_Game.Sprites
             this.Coins = coins;
             this.Texture = content.Load<Texture2D>("Sprites\\Coin\\SpriteSheetCoin");
 
-            this.Collidable = false;
+            this.Collidable = true;
 
             this.Position = new Vector2(200, 0);
-            this.CollisionBox = new Rectangle((int) Position.X,(int) Position.Y, 50, 50);
+            this.CollisionBox = new Rectangle((int) Position.X,(int) Position.Y, 40, 40);
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 50, 50)));
             this.Add(new AnimationFrame(new Rectangle(50, 0, 50, 50)));

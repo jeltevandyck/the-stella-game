@@ -4,12 +4,12 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Coin/SpriteSheetCoin.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetCristalSideways.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetHeinekenSideways.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetMaesSideways.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaEmptyGlassSideways.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaQuarterGlassSideWays.png</File>
+    <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Coin/SpriteSheetCoin.png</File>
+    <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetCristalSideways.png</File>
+    <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetHeinekenSideways.png</File>
+    <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetMaesSideways.png</File>
+    <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaEmptyGlassSideways.png</File>
+    <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaQuarterGlassSideWays.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

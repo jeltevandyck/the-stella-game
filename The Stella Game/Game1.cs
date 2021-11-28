@@ -13,7 +13,9 @@ namespace The_Stella_Game
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        private Menu menu;  
+        private Menu menu;
+
+        private static Game1 instance;
 
         public Game1()
         {
@@ -22,6 +24,18 @@ namespace The_Stella_Game
             _graphics.PreferredBackBufferHeight = MAX_HEIGHT;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+
+            instance = this;
+        }
+
+        public static Game1 GetInstance()
+        {
+            return instance;
+        }
+
+        public GraphicsDeviceManager GetGraphicsDeviceManager()
+        {
+            return _graphics;
         }
 
         protected override void Initialize()
