@@ -38,11 +38,15 @@ namespace The_Stella_Game
             return _graphics;
         }
 
+        public void ChangeMenu(Menu menu)
+        {
+            this.menu = menu;
+        }
+
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            menu = new StartMenu(_graphics, Content);
-            menu.Initialize();
+            menu = new StartMenu(this, _graphics, Content);
 
             base.Initialize();
         }
@@ -56,8 +60,8 @@ namespace The_Stella_Game
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+            //if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            //    Exit();
 
             // TODO: Add your update logic here
             menu.Update(gameTime);
