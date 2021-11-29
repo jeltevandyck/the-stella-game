@@ -15,6 +15,8 @@ namespace The_Stella_Game.Sprites
         public int Health { get; private set; } = 3;
         public int Quantity { get; private set; } = 1;
         public decimal Coins { get; private set; } = 0;
+        public bool HasJumped { get; private set; }
+
         public Vector2 SpawnPosition;
 
         public StellaPlayer(ContentManager contentManager, Vector2 spawnPosition) : base(contentManager)
@@ -30,6 +32,8 @@ namespace The_Stella_Game.Sprites
             this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 99)));
             this.Add(new AnimationFrame(new Rectangle(200, 0, 100, 99)));
             this.Add(new AnimationFrame(new Rectangle(300, 0, 100, 99)));
+
+            HasJumped = true;
         }
 
         public override void Move(List<IGObject> gObjects)
@@ -40,12 +44,15 @@ namespace The_Stella_Game.Sprites
             else Speed = 3f;
 
             if (state.IsKeyDown(Keys.Q)) Velocity.X = -Speed; //LEFT
-            if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; //RIGHT
-            if (state.GetPressedKeys().Length <= 0)
+            else if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; else Velocity.X = 0f; //RIGHT
+
+
+            /*if (state.GetPressedKeys().Length <= 0)
             {
                 Velocity.X = 0;
                 Velocity.Y = 0;
-            }
+            }*/
+
 
             foreach (IGObject obj in gObjects)
             {
@@ -62,13 +69,35 @@ namespace The_Stella_Game.Sprites
             }
 
             Position += Velocity;
+
+            if (state.IsKeyDown(Keys.Space) && HasJumped == false)
+            {
+                Position.Y -= 10f;
+                Velocity.Y = -5f;
+                HasJumped = true;
+            }
+
+            if (HasJumped == true)
+            {
+                float i = 1;
+                Velocity.Y += 0.15f * i;
+            }
+
+            if (Position.Y + Texture.Height >= 500)
+            {
+                HasJumped = false;
+            }
+
+            if (HasJumped == false)
+            {
+                Velocity.Y = 0f;
+            }
         }
 
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
             this.Move(gObjects);
             
-          
             base.Update(gameTime, gObjects);
         }
 
