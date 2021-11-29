@@ -15,12 +15,13 @@ namespace The_Stella_Game.Sprites
         public int Health { get; private set; } = 3;
         public int Quantity { get; private set; } = 1;
         public decimal Coins { get; private set; } = 0;
-
+        public bool IsFalling { get; private set; } = false;
+        public bool Jumped { get; private set; } = false;
         public StellaPlayer(ContentManager contentManager, Vector2 spawnPosition) : base(contentManager, spawnPosition)
         {
             this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaQuarterGlassSideWays");
 
-            this.CollisionBox = new CollisionBox(spawnPosition, 25, 55, 20, 0, true);
+            this.CollisionBox = new CollisionBox(spawnPosition, 25, 47, 20, 0, true);
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 99)));
             this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 99)));
@@ -60,11 +61,23 @@ namespace The_Stella_Game.Sprites
                 if (((this.Velocity.Y > 0 && this.IsTouchingTop(sprite)) ||
                     (this.Velocity.Y < 0 & this.IsTouchingBottom(sprite))) && !sprite.CollisionBox.Collidable)
                     this.Velocity.Y = 0;
+
+                //if (!this.IsTouchingTop(sprite) && !Jumped)
+                //{
+                //    Velocity.Y = Speed;
+                //    IsFalling = true;
+                //}
+                //else
+                //{
+                //    Debug.WriteLine("Touching top!");
+                //    IsFalling = false;
+                //}
             }
 
             Position += Velocity;
-
             Velocity = Vector2.Zero;
+
+            //Debug.WriteLine("X: " + Position.X + " Y: " + Position.Y);
 
             base.Update(gameTime, gObjects);
         }

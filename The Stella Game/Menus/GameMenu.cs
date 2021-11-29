@@ -17,15 +17,15 @@ namespace The_Stella_Game.Menus
         {
             gameBackground = game.Content.Load<Texture2D>("Sprites\\Menu\\BackgroundLevel1");
 
-            StellaPlayer stellaPlayer = new StellaPlayer(Content, new Vector2(2, 0));
+            StellaPlayer stellaPlayer = new StellaPlayer(Content, new Vector2(2, -100));
             stellaPlayer.SetRectangleTexture(Game.GraphicsDevice, stellaPlayer.Texture);
             SpriteObjects.Add(stellaPlayer);
 
-            MiniBoss miniBossMaes = new MiniBoss(Content, "SpriteSheetMaesSideways", new Vector2(300, 85), 400);
+            MiniBoss miniBossMaes = new MiniBoss(Content, "SpriteSheetMaesSideways", new Vector2(300, 75), 400);
             miniBossMaes.SetRectangleTexture(Game.GraphicsDevice, miniBossMaes.Texture);
             SpriteObjects.Add(miniBossMaes);
 
-            MiniBoss miniBossHeineken = new MiniBoss(Content, "SpriteSheetHeinekenSideways", new Vector2(600, 340), 400);
+            MiniBoss miniBossHeineken = new MiniBoss(Content, "SpriteSheetHeinekenSideways", new Vector2(600, 330), 400);
             miniBossHeineken.SetRectangleTexture(Game.GraphicsDevice, miniBossHeineken.Texture);
             SpriteObjects.Add(miniBossHeineken);
 
