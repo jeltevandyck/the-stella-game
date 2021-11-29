@@ -15,8 +15,7 @@ namespace The_Stella_Game.Sprites
             this.Coins = coins;
             this.Texture = content.Load<Texture2D>("Sprites\\Coin\\SpriteSheetCoin");
 
-            this.Position = spawnPosition;
-            this.CollisionBox = new CollisionBox(Position, 40, 40);
+            this.CollisionBox = new CollisionBox(spawnPosition, 40, 40);
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 50, 50)));
             this.Add(new AnimationFrame(new Rectangle(50, 0, 50, 50)));

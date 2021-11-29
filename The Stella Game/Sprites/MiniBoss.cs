@@ -16,10 +16,15 @@ namespace The_Stella_Game.Sprites
 
         private Boolean _backToSpawn = false;
 
-        public MiniBoss(ContentManager content, string sheet, Vector2 spawnPosition) : base(content, spawnPosition)
+        public MiniBoss(ContentManager content, string sheet, Vector2 spawnPosition) : this(content, sheet, spawnPosition, 100)
+        {
+        }
+
+        public MiniBoss(ContentManager content, string sheet, Vector2 spawnPosition, int walkrange) : base(content, spawnPosition)
         {
             this.Texture = content.Load<Texture2D>("Sprites\\Miniboss\\" + sheet);
-            this.CollisionBox = new CollisionBox(Position, 100, 100);
+            this.CollisionBox = new CollisionBox(spawnPosition, 25, 60, 20, 0, true);
+            this.WalkRange = walkrange;
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 100)));
             this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 100)));

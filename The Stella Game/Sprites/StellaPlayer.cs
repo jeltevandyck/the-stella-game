@@ -19,9 +19,8 @@ namespace The_Stella_Game.Sprites
         public StellaPlayer(ContentManager contentManager, Vector2 spawnPosition) : base(contentManager, spawnPosition)
         {
             this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaQuarterGlassSideWays");
-            this.Position = new Vector2(0, 0);
 
-            this.CollisionBox = new CollisionBox(Position, 25, 60, 20, 0, true);
+            this.CollisionBox = new CollisionBox(spawnPosition, 25, 55, 20, 0, true);
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 99)));
             this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 99)));

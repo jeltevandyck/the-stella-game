@@ -14,6 +14,7 @@ namespace The_Stella_Game.Sprites
         public Entity(ContentManager content, Vector2 spawnPosition) : base(content)
         {
             this.SpawnPosition = spawnPosition;
+            this.Position = spawnPosition;
         }
 
         public abstract void Move();

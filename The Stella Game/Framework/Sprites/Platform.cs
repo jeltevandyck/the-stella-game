@@ -7,33 +7,24 @@ using System.Text;
 
 namespace The_Stella_Game.Framework
 {
-    public class Platform : IGObject
+    public class Platform : Sprite
     {
-        private Texture2D texture;
-
-        public Vector2 Position { get; private set; }
-
-        public Rectangle Rectangle
+        public Platform(ContentManager content, string sheet, Vector2 spawnPosition) : base(content)
         {
-            get
-            {
-                return new Rectangle((int)Position.X, (int)Position.Y, texture.Width, texture.Height);
-            }
-        }
-        public Platform(ContentManager content, string sheet, Vector2 spawnPosition)
-        {
-            this.texture = content.Load<Texture2D>("Sprites\\Platform\\" + sheet);
+            this.Texture = content.Load<Texture2D>("Sprites\\Platform\\" + sheet);
             this.Position = spawnPosition;
+
+            this.CollisionBox = new CollisionBox(spawnPosition, Texture.Width, Texture.Height, 0, 0, false);
         }
 
-        public void Update(GameTime gameTime, List<IGObject> gObjects)
+        public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
 
         }
 
-        public virtual void Draw(GameTime gameTime, SpriteBatch spritebatch)
+        public override void Draw(GameTime gameTime, SpriteBatch spritebatch)
         {
-            spritebatch.Draw(texture, Rectangle, Color.White);
+            spritebatch.Draw(Texture, CollisionBox.Box, Color.White);
         }
     }
 }
