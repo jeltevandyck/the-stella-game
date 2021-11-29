@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using The_Stella_Game.Sprites;
 using The_Stella_Game.Framework;
+using Microsoft.Xna.Framework.Input;
 
 namespace The_Stella_Game.Menus
 {
@@ -41,6 +42,15 @@ namespace The_Stella_Game.Menus
         private void StartButton_Click(object sender, EventArgs e)
         {
             Game.ChangeMenu(new GameMenu(Game, Graphics, Content));
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            if (Keyboard.GetState().IsKeyDown(Keys.Enter)) Game.ChangeMenu(new GameMenu(Game, Graphics, Content));
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape)) System.Environment.Exit(0);
+
+
+            base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

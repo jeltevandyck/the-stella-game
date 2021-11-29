@@ -106,3 +106,4 @@ C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021
 C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Platform\V4.xnb
 C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Platform\V5.xnb
 C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Platform\V6.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Menu\BackgroundLevel1.xnb

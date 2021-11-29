@@ -12,19 +12,14 @@ namespace The_Stella_Game.Sprites
     {
         public int Lives { get; private set; } = 1;
 
-        public Vector2 SpawnPosition;
         public int WalkRange = 100;
 
         private Boolean _backToSpawn = false;
 
-        public MiniBoss(ContentManager content, string sheet, Vector2 spawnPosition) : base(content)
+        public MiniBoss(ContentManager content, string sheet, Vector2 spawnPosition) : base(content, spawnPosition)
         {
-            this.Collidable = false;
-
-            this.SpawnPosition = spawnPosition;
             this.Texture = content.Load<Texture2D>("Sprites\\Miniboss\\" + sheet);
-            this.Position = spawnPosition;
-            this.CollisionBox = new Rectangle((int)Position.X, (int)Position.Y, 100, 100);
+            this.CollisionBox = new CollisionBox(Position, 100, 100);
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 100)));
             this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 100)));

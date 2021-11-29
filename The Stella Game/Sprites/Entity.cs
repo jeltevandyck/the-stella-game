@@ -10,8 +10,10 @@ namespace The_Stella_Game.Sprites
     public abstract class Entity : Sprite
     {
         public Vector2 Velocity;
-        public Entity(ContentManager content) : base(content)
+        public Vector2 SpawnPosition { get; private set; }
+        public Entity(ContentManager content, Vector2 spawnPosition) : base(content)
         {
+            this.SpawnPosition = spawnPosition;
         }
 
         public abstract void Move();
