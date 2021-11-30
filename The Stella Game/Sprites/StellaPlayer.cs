@@ -83,7 +83,7 @@ namespace The_Stella_Game.Sprites
                 Velocity.Y += 0.15f * i;
             }
 
-            if (Position.Y + Texture.Height >= 500)
+            if (Position.Y + Texture.Height >= 100)
             {
                 HasJumped = false;
             }

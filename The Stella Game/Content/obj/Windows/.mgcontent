@@ -11,6 +11,7 @@
     <File>C:/Users/sonia/Desktop/Test/The Stella Game/Content/Sprites/Buttons/QuitButton.png</File>
     <File>C:/Users/sonia/Desktop/Test/The Stella Game/Content/Sprites/Buttons/StartButton.png</File>
     <File>C:/Users/sonia/Desktop/Test/The Stella Game/Content/Sprites/Coin/SpriteSheetCoin.png</File>
+    <File>C:/Users/sonia/Desktop/Test/The Stella Game/Content/Sprites/Key/VatBierPixilated.png</File>
     <File>C:/Users/sonia/Desktop/Test/The Stella Game/Content/Sprites/Menu/BackgroundLevel1.png</File>
     <File>C:/Users/sonia/Desktop/Test/The Stella Game/Content/Sprites/Menu/StellaLevelsScherm.png</File>
     <File>C:/Users/sonia/Desktop/Test/The Stella Game/Content/Sprites/Menu/StellaStartScherm.png</File>
@@ -31,8 +32,13 @@
     <File>C:/Users/sonia/Desktop/Test/The Stella Game/Content/Sprites/Platform/V6.png</File>
     <File>C:/Users/sonia/Desktop/Test/The Stella Game/Content/Sprites/Player/SpriteSheetStellaEmptyGlassSideways.png</File>
     <File>C:/Users/sonia/Desktop/Test/The Stella Game/Content/Sprites/Player/SpriteSheetStellaQuarterGlassSideWays.png</File>
+    <File>C:/Users/sonia/Desktop/Test/The Stella Game/Content/Sprites/Spikes/SpriteSheetSpikeLong.png</File>
+    <File>C:/Users/sonia/Desktop/Test/The Stella Game/Content/Sprites/Spikes/SpriteSheetSpikeShort.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
