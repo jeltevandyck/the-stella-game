@@ -61,7 +61,7 @@ namespace The_Stella_Game.Sprites
                 if (((this.Velocity.Y > 0 && this.IsTouchingTop(sprite)) ||
                     (this.Velocity.Y < 0 & this.IsTouchingBottom(sprite))) && !sprite.CollisionBox.Collidable)
                     this.Velocity.Y = 0;
-
+                
                 //if (!this.IsTouchingTop(sprite) && !Jumped)
                 //{
                 //    Velocity.Y = Speed;
