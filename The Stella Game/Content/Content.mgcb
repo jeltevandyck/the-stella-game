@@ -97,6 +97,18 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/Coin/SpriteSheetCoin.png
 
+#begin Sprites/Key/VatBierPixilated.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Key/VatBierPixilated.png
+
 #begin Sprites/Menu/BackgroundLevel1.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -180,6 +192,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/Miniboss/SpriteSheetMaesSideways.png
+
+#begin Sprites/Obstacles/SpriteSheetSpikeLong.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Obstacles/SpriteSheetSpikeLong.png
 
 #begin Sprites/Platform/H1.png
 /importer:TextureImporter
