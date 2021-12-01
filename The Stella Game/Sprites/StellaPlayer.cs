@@ -15,15 +15,13 @@ namespace The_Stella_Game.Sprites
         public int Health { get; private set; } = 3;
         public int Quantity { get; private set; } = 1;
         public decimal Coins { get; private set; } = 0;
-
-        public StellaPlayer(ContentManager contentManager) : base(contentManager)
+        public bool IsFalling { get; private set; } = false;
+        public bool Jumped { get; private set; } = false;
+        public StellaPlayer(ContentManager contentManager, Vector2 spawnPosition) : base(contentManager, spawnPosition)
         {
             this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaQuarterGlassSideWays");
-            this.Position = new Vector2(0, 0);
 
-            this.CollisionBox_X_Extra = 20;
-            this.CollisionBox = new Rectangle((int) Position.X, (int) Position.Y, 35, 65);
-
+            this.CollisionBox = new CollisionBox(spawnPosition, 25, 47, 20, 0, true);
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 99)));
             this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 99)));
@@ -51,22 +49,35 @@ namespace The_Stella_Game.Sprites
 
             foreach (IGObject obj in gObjects)
             {
+                if (!(obj is Sprite)) continue;
                 Sprite sprite = obj as Sprite;
+
                 if (sprite.Equals(this)) continue;
 
                 if (((this.Velocity.X > 0 && this.IsTouchingLeft(sprite)) ||
-                    (this.Velocity.X < 0 & this.IsTouchingRight(sprite))) && !sprite.Collidable)
+                    (this.Velocity.X < 0 & this.IsTouchingRight(sprite))) && !sprite.CollisionBox.Collidable)
                     this.Velocity.X = 0;
 
                 if (((this.Velocity.Y > 0 && this.IsTouchingTop(sprite)) ||
-                    (this.Velocity.Y < 0 & this.IsTouchingBottom(sprite))) && !sprite.Collidable)
+                    (this.Velocity.Y < 0 & this.IsTouchingBottom(sprite))) && !sprite.CollisionBox.Collidable)
                     this.Velocity.Y = 0;
-
-                Position += Velocity;
-
-                Velocity = Vector2.Zero;
+                
+                //if (!this.IsTouchingTop(sprite) && !Jumped)
+                //{
+                //    Velocity.Y = Speed;
+                //    IsFalling = true;
+                //}
+                //else
+                //{
+                //    Debug.WriteLine("Touching top!");
+                //    IsFalling = false;
+                //}
             }
 
+            Position += Velocity;
+            Velocity = Vector2.Zero;
+
+            //Debug.WriteLine("X: " + Position.X + " Y: " + Position.Y);
 
             base.Update(gameTime, gObjects);
         }

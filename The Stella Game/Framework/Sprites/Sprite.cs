@@ -13,12 +13,8 @@ namespace The_Stella_Game.Framework
         public ContentManager Content { get; private set; }
         public Texture2D Texture;
         public Vector2 Position;
-        public Rectangle CollisionBox;
 
-        public int CollisionBox_X_Extra = 0;
-        public int CollisionBox_Y_Extra = 0;
-
-        public Boolean Collidable = false;
+        public CollisionBox CollisionBox;
 
         public float Speed { get; set; } = 2f;
 
@@ -27,57 +23,49 @@ namespace The_Stella_Game.Framework
             this.Content = content;
         }
 
-        public bool Intersects(Sprite sprite)
-        {
-            if (sprite.Equals(this)) return false;
-            else
-            {
-                return sprite.CollisionBox.Intersects(CollisionBox);
-            }
-        }
         public virtual void Update(GameTime gameTime, List<IGObject> gObjects)
         {
-            CollisionBox.X = (int) Position.X + CollisionBox_X_Extra;
-            CollisionBox.Y = (int) Position.Y + CollisionBox_Y_Extra;
+            if (CollisionBox == null) return;
+            else CollisionBox.Update(Position);
         }
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(Texture, Position, CollisionBox, Color.White);
+            spriteBatch.Draw(Texture, Position, CollisionBox.Box, Color.White);
         }
 
         #region Collision
         //Source: https://github.com/Oyyou/MonoGame_Tutorials/blob/master/MonoGame_Tutorials/Tutorial009/Sprites/Sprite.cs
         public bool IsTouchingLeft(Sprite sprite)
         {
-            return this.CollisionBox.Right + this.Speed > sprite.CollisionBox.Left &&
-              this.CollisionBox.Left < sprite.CollisionBox.Left &&
-              this.CollisionBox.Bottom > sprite.CollisionBox.Top &&
-              this.CollisionBox.Top < sprite.CollisionBox.Bottom;
+            return this.CollisionBox.Box.Right + this.Speed > sprite.CollisionBox.Box.Left &&
+              this.CollisionBox.Box.Left < sprite.CollisionBox.Box.Left &&
+              this.CollisionBox.Box.Bottom > sprite.CollisionBox.Box.Top &&
+              this.CollisionBox.Box.Top < sprite.CollisionBox.Box.Bottom;
         }
 
         public bool IsTouchingRight(Sprite sprite)
         {
-            return this.CollisionBox.Left + this.Speed < sprite.CollisionBox.Right &&
-              this.CollisionBox.Right > sprite.CollisionBox.Right &&
-              this.CollisionBox.Bottom > sprite.CollisionBox.Top &&
-              this.CollisionBox.Top < sprite.CollisionBox.Bottom;
+            return this.CollisionBox.Box.Left + this.Speed < sprite.CollisionBox.Box.Right &&
+              this.CollisionBox.Box.Right > sprite.CollisionBox.Box.Right &&
+              this.CollisionBox.Box.Bottom > sprite.CollisionBox.Box.Top &&
+              this.CollisionBox.Box.Top < sprite.CollisionBox.Box.Bottom;
         }
 
         public bool IsTouchingTop(Sprite sprite)
         {
-            return this.CollisionBox.Bottom + this.Speed > sprite.CollisionBox.Top &&
-              this.CollisionBox.Top < sprite.CollisionBox.Top &&
-              this.CollisionBox.Right > sprite.CollisionBox.Left &&
-              this.CollisionBox.Left < sprite.CollisionBox.Right;
+            return this.CollisionBox.Box.Bottom + this.Speed > sprite.CollisionBox.Box.Top &&
+              this.CollisionBox.Box.Top < sprite.CollisionBox.Box.Top &&
+              this.CollisionBox.Box.Right > sprite.CollisionBox.Box.Left &&
+              this.CollisionBox.Box.Left < sprite.CollisionBox.Box.Right;
         }
 
         public bool IsTouchingBottom(Sprite sprite)
         {
-            return this.CollisionBox.Top + this.Speed < sprite.CollisionBox.Bottom &&
-              this.CollisionBox.Bottom > sprite.CollisionBox.Bottom &&
-              this.CollisionBox.Right > sprite.CollisionBox.Left &&
-              this.CollisionBox.Left < sprite.CollisionBox.Right;
+            return this.CollisionBox.Box.Top + this.Speed < sprite.CollisionBox.Box.Bottom &&
+              this.CollisionBox.Box.Bottom > sprite.CollisionBox.Box.Bottom &&
+              this.CollisionBox.Box.Right > sprite.CollisionBox.Box.Left &&
+              this.CollisionBox.Box.Left < sprite.CollisionBox.Box.Right;
         }
         #endregion
 

@@ -45,13 +45,13 @@ namespace The_Stella_Game.Framework
             base.Update(gameTime, gObjects);
         }
 
-        public void SetRectangleTexture(GraphicsDevice graphicsDevice, Texture2D texture)
+        public SpriteAnimation SetRectangleTexture(GraphicsDevice graphicsDevice, Texture2D texture)
         {
             var colours = new List<Color>();
 
-            for (int y = 0; y < CollisionBox.Height; y++)
+            for (int y = 0; y < CollisionBox.Box.Height; y++)
             {
-                for (int x = 0; x < CollisionBox.Width; x++)
+                for (int x = 0; x < CollisionBox.Box.Width; x++)
                 {
                     if (y == 0 || // On the top
                         x == 0 || // On the left
@@ -67,14 +67,16 @@ namespace The_Stella_Game.Framework
                 }
             }
 
-            RectangleTexture = new Texture2D(graphicsDevice, CollisionBox.Width, CollisionBox.Height);
+            RectangleTexture = new Texture2D(graphicsDevice, CollisionBox.Box.Width, CollisionBox.Box.Height);
             RectangleTexture.SetData<Color>(colours.ToArray());
+
+            return this;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(Texture, Position, CurrentFrame.Rectangle, Color.White, 0, new Vector2(0, 0), .7f, SpriteEffects.None, 0);
-            spriteBatch.Draw(RectangleTexture, new Vector2(CollisionBox.X, CollisionBox.Y), Color.Red);
+            spriteBatch.Draw(Texture, Position, CurrentFrame.Rectangle, Color.White, 0, new Vector2(0, 0), .6f, SpriteEffects.None, 0);
+            spriteBatch.Draw(RectangleTexture, new Vector2(CollisionBox.Box.X, CollisionBox.Box.Y), Color.Red);
         }
     }
 }

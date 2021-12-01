@@ -5,32 +5,58 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using The_Stella_Game.Sprites;
+using The_Stella_Game.Framework;
+using Microsoft.Xna.Framework.Input;
 
 namespace The_Stella_Game.Menus
 {
     public class StartMenu : Menu
     {
-        public StartMenu(GraphicsDeviceManager graphics, ContentManager content) : base (graphics, content)
+        private Texture2D gameBackground;
+        public StartMenu(Game1 game, GraphicsDeviceManager graphics, ContentManager content) : base (game, graphics, content)
         {
+            gameBackground = game.Content.Load<Texture2D>("Sprites\\Menu\\StellaStartScherm");
+            Button StartButton = new Button(Content, "StartButton", new Vector2(600, 500));
+            Button LevelsButton = new Button(Content, "LevelsButton", new Vector2(600, 610));
+            Button QuitButton = new Button(Content, "QuitButton", new Vector2(600, 720));
+
+            StartButton.Click += StartButton_Click;
+            LevelsButton.Click += LevelsButton_Click;
+            QuitButton.Click += QuitButton_Click;
+
+            SpriteObjects.Add(StartButton);
+            SpriteObjects.Add(LevelsButton);
+            SpriteObjects.Add(QuitButton);
         }
 
-        public override void Initialize()
+        private void QuitButton_Click(object sender, EventArgs e)
         {
-            Coin coin = new Coin(Content, 50);
-            coin.SetRectangleTexture(Graphics.GraphicsDevice, coin.Texture);
-            SpriteObjects.Add(coin);
+            System.Environment.Exit(0);
+        }
 
-            MiniBoss miniBoss = new MiniBoss(Content, "SpriteSheetMaesSideways", new Vector2(300,10));
-            miniBoss.SetRectangleTexture(Graphics.GraphicsDevice, miniBoss.Texture);
-            SpriteObjects.Add(miniBoss);
+        private void LevelsButton_Click(object sender, EventArgs e)
+        {
+            Game.ChangeMenu(new LevelsMenu(Game, Graphics, Content));
+        }
 
-            StellaPlayer stella = new StellaPlayer(Content);
-            stella.SetRectangleTexture(Graphics.GraphicsDevice, stella.Texture);
-            SpriteObjects.Add(stella);
+        private void StartButton_Click(object sender, EventArgs e)
+        {
+            Game.ChangeMenu(new GameMenu(Game, Graphics, Content));
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            if (Keyboard.GetState().IsKeyDown(Keys.Enter)) Game.ChangeMenu(new GameMenu(Game, Graphics, Content));
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape)) System.Environment.Exit(0);
+
+
+            base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            spriteBatch.Draw(gameBackground, new Rectangle(0, 0, 1700, 900), Color.White);
+
             base.Draw(gameTime, spriteBatch);
         }
     }

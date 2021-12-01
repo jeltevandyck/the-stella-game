@@ -14,21 +14,20 @@ namespace The_Stella_Game.Menus
         public int MaxWidth = 1700;
         public int MaxHeight = 900;
 
+        public bool IsMouseVisible { get; set; }
         public ContentManager Content { get; private set; }
-
         public GraphicsDeviceManager Graphics { get; private set; }
-
         public List<IGObject> SpriteObjects { get; private set; }
+        public Game1 Game { get; private set; }
 
-        public Menu(GraphicsDeviceManager graphics, ContentManager content)
+        public Menu(Game1 game, GraphicsDeviceManager graphics, ContentManager content)
         {
+            this.Game = game;
             this.Graphics = graphics;
             Content = content;
 
             SpriteObjects = new List<IGObject>();
         }
-
-        public abstract void Initialize();
 
         public virtual void Update(GameTime gameTime)
         {

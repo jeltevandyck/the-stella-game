@@ -8,7 +8,6 @@ namespace The_Stella_Game.Framework
     public class AnimationFrame
     {
         public Rectangle Rectangle;
-
         public AnimationFrame(Rectangle rect)
         {
             Rectangle = rect;
