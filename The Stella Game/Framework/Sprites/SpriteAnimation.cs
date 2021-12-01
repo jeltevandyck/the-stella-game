@@ -76,7 +76,8 @@ namespace The_Stella_Game.Framework
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(Texture, Position, CurrentFrame.Rectangle, Color.White, 0, new Vector2(0, 0), .6f, SpriteEffects.None, 0);
-            spriteBatch.Draw(RectangleTexture, new Vector2(CollisionBox.Box.X, CollisionBox.Box.Y), Color.Red);
+            
+            if (RectangleTexture != null) spriteBatch.Draw(RectangleTexture, new Vector2(CollisionBox.Box.X, CollisionBox.Box.Y), Color.Red);
         }
     }
 }
