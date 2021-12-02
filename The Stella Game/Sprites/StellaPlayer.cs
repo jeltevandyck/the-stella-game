@@ -40,7 +40,10 @@ namespace The_Stella_Game.Sprites
             if (state.IsKeyDown(Keys.S)) Velocity.Y = Speed; //DOWN
 
             if (state.IsKeyDown(Keys.Q)) Velocity.X = -Speed; //LEFT
-            if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; //RIGHT
+            else if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; //RIGHT
+            else Velocity.X = 0f;
+
+            if (state.IsKeyDown(Keys.Space) && !IsFalling) IsFalling = true;
         }
 
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
@@ -53,31 +56,29 @@ namespace The_Stella_Game.Sprites
                 Sprite sprite = obj as Sprite;
 
                 if (sprite.Equals(this)) continue;
-
-                if (((this.Velocity.X > 0 && this.IsTouchingLeft(sprite)) ||
-                    (this.Velocity.X < 0 & this.IsTouchingRight(sprite))) && !sprite.CollisionBox.Collidable)
-                    this.Velocity.X = 0;
-
-                if (((this.Velocity.Y > 0 && this.IsTouchingTop(sprite)) ||
-                    (this.Velocity.Y < 0 & this.IsTouchingBottom(sprite))) && !sprite.CollisionBox.Collidable)
-                    this.Velocity.Y = 0;
                 
-                //if (!this.IsTouchingTop(sprite) && !Jumped)
-                //{
-                //    Velocity.Y = Speed;
-                //    IsFalling = true;
-                //}
-                //else
-                //{
-                //    Debug.WriteLine("Touching top!");
-                //    IsFalling = false;
-                //}
-            }
+                if (this.Intersects(sprite) && !sprite.CollisionBox.Collidable)
+                {
+                    if (sprite is Platform)
+                    {
+                        Debug.WriteLine("Intersects platform");
 
-            Position += Velocity;
+                        Velocity.X = 0f;
+                        Velocity.Y = 0f;
+                        IsFalling = false;
+                        break;
+                    }
+                }
+                else
+                {
+                    Velocity.Y = Speed;
+                    IsFalling = true;
+                }
+            }
+                    Position += Velocity;
+           
             Velocity = Vector2.Zero;
 
-            //Debug.WriteLine("X: " + Position.X + " Y: " + Position.Y);
 
             base.Update(gameTime, gObjects);
         }
