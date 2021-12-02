@@ -14,6 +14,8 @@ namespace The_Stella_Game.Framework
         public Texture2D Texture;
         public Vector2 Position;
 
+        public Vector2 Velocity;
+
         public CollisionBox CollisionBox;
 
         public float Speed { get; set; } = 2f;
@@ -21,6 +23,16 @@ namespace The_Stella_Game.Framework
         public Sprite(ContentManager content)
         {
             this.Content = content;
+            this.Velocity = new Vector2(0, 0);
+        }
+
+        public bool Intersects(Sprite sprite)
+        {
+            Rectangle box = CollisionBox.Box;
+            box.X += (int) Velocity.X;
+            box.Y += (int) Velocity.Y;
+
+            return box.Intersects(sprite.CollisionBox.Box);
         }
 
         public virtual void Update(GameTime gameTime, List<IGObject> gObjects)

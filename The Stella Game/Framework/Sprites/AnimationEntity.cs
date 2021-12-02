@@ -8,7 +8,6 @@ namespace The_Stella_Game.Framework
 {
     public abstract class AnimationEntity : SpriteAnimation
     {
-        public Vector2 Velocity;
         public Vector2 SpawnPosition { get; private set; }
         public AnimationEntity(ContentManager content, Vector2 spawnPosition) : base(content)
         {

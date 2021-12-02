@@ -31,22 +31,6 @@ namespace The_Stella_Game.Sprites
 
         public override void Move(List<IGObject> gObjects)
         {
-            KeyboardState state = Keyboard.GetState();
-
-            if (state.IsKeyDown(Keys.LeftControl)) Speed = 5f;
-            else Speed = 3f;
-
-            if (state.IsKeyDown(Keys.Z)) Velocity.Y = -Speed; //UP
-            if (state.IsKeyDown(Keys.S)) Velocity.Y = Speed; //DOWN
-
-            if (state.IsKeyDown(Keys.Q)) Velocity.X = -Speed; //LEFT
-            if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; //RIGHT
-        }
-
-        public override void Update(GameTime gameTime, List<IGObject> gObjects)
-        {
-            this.Move(gObjects);
-
             foreach (IGObject obj in gObjects)
             {
                 if (!(obj is Sprite)) continue;
@@ -54,30 +38,47 @@ namespace The_Stella_Game.Sprites
 
                 if (sprite.Equals(this)) continue;
 
-                if (((this.Velocity.X > 0 && this.IsTouchingLeft(sprite)) ||
-                    (this.Velocity.X < 0 & this.IsTouchingRight(sprite))) && !sprite.CollisionBox.Collidable)
-                    this.Velocity.X = 0;
-
-                if (((this.Velocity.Y > 0 && this.IsTouchingTop(sprite)) ||
-                    (this.Velocity.Y < 0 & this.IsTouchingBottom(sprite))) && !sprite.CollisionBox.Collidable)
-                    this.Velocity.Y = 0;
-                
-                //if (!this.IsTouchingTop(sprite) && !Jumped)
-                //{
-                //    Velocity.Y = Speed;
-                //    IsFalling = true;
-                //}
-                //else
-                //{
-                //    Debug.WriteLine("Touching top!");
-                //    IsFalling = false;
-                //}
+                if (this.Intersects(sprite) && !sprite.CollisionBox.Collidable)
+                {
+                    Velocity.Y = 0f;
+                    IsFalling = false;
+                    break;
+                }
+                else
+                {
+                    Velocity.Y = Speed;
+                    IsFalling = true;
+                }
             }
+
+            if (Jumped)
+            {
+                //TODO
+            }
+
 
             Position += Velocity;
             Velocity = Vector2.Zero;
+        }
 
-            //Debug.WriteLine("X: " + Position.X + " Y: " + Position.Y);
+        public override void Update(GameTime gameTime, List<IGObject> gObjects)
+        {
+            KeyboardState state = Keyboard.GetState();
+
+            if (state.IsKeyDown(Keys.LeftControl)) Speed = 5f;
+            else Speed = 3f;
+
+            if (state.IsKeyDown(Keys.Z)) Velocity.Y = -Speed; //UP
+            else if (state.IsKeyDown(Keys.S)) Velocity.Y = Speed; //DOWN
+            else Velocity.Y = 0f;
+
+            if (state.IsKeyDown(Keys.Q)) Velocity.X = -Speed; //LEFT
+            else if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; //RIGHT
+            else Velocity.X = 0f;
+
+            if (state.IsKeyDown(Keys.Space) && !IsFalling && !Jumped) Jumped = true;
+            
+            this.Move(gObjects);
 
             base.Update(gameTime, gObjects);
         }

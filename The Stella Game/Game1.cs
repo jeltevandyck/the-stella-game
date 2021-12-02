@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using The_Stella_Game.Framework;
 using The_Stella_Game.Menus;
 
 namespace The_Stella_Game

@@ -131,3 +131,9 @@ C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Platform\V6.xnb
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Key\VatBierPixilated.xnb
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Obstacles\SpriteSheetSpikeLong.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Hearts\Heart.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Hearts\HeartGrey.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Hearts\Heart.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Hearts\HeartGrey.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Key\VatBierPixilated.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Obstacles\SpriteSheetSpikeLong.xnb

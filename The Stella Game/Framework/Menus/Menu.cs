@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 using The_Stella_Game.Framework;
 
-namespace The_Stella_Game.Menus
+namespace The_Stella_Game.Framework
 {
     public abstract class Menu
     {
@@ -19,6 +19,8 @@ namespace The_Stella_Game.Menus
         public GraphicsDeviceManager Graphics { get; private set; }
         public List<IGObject> SpriteObjects { get; private set; }
         public Game1 Game { get; private set; }
+
+        public Texture2D Background;
 
         public Menu(Game1 game, GraphicsDeviceManager graphics, ContentManager content)
         {
@@ -38,6 +40,8 @@ namespace The_Stella_Game.Menus
         }
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            spriteBatch.Draw(Background, new Rectangle(0, 0, MaxWidth, MaxHeight), Color.White);
+
             foreach (IGObject obj in SpriteObjects)
             {
                 obj.Draw(gameTime, spriteBatch);
