@@ -11,13 +11,12 @@ using The_Stella_Game.Framework;
 namespace The_Stella_Game.Menus
 {
     public class GameMenu : Menu
-    {
-        private Texture2D gameBackground;
+    { 
         public GameMenu(Game1 game, GraphicsDeviceManager graphics, ContentManager content) : base(game, graphics, content)
         {
-            gameBackground = game.Content.Load<Texture2D>("Sprites\\Menu\\BackgroundLevel1");
+            this.Background = content.Load<Texture2D>("Sprites\\Menu\\BackgroundLevel1");
 
-            StellaPlayer stellaPlayer = new StellaPlayer(Content, new Vector2(2, 400));
+            StellaPlayer stellaPlayer = new StellaPlayer(Content, new Vector2(2, 0));
             stellaPlayer.SetRectangleTexture(Game.GraphicsDevice, stellaPlayer.Texture);
             SpriteObjects.Add(stellaPlayer);
 
@@ -90,16 +89,9 @@ namespace The_Stella_Game.Menus
 
         public override void Update(GameTime gameTime)
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Escape)) Game.ChangeMenu(new StartMenu(Game, Graphics, Content));
+            if (Keyboard.GetState().IsKeyDown(Keys.Tab)) Game.ChangeMenu(new StartMenu(Game, Graphics, Content));
 
             base.Update(gameTime);
-        }
-
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
-        {
-            spriteBatch.Draw(gameBackground, new Rectangle(0, 0, 1700, 900), Color.White);
-
-            base.Draw(gameTime, spriteBatch);
         }
     }
 }

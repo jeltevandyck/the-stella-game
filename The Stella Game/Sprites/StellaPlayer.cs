@@ -31,43 +31,18 @@ namespace The_Stella_Game.Sprites
 
         public override void Move(List<IGObject> gObjects)
         {
-            KeyboardState state = Keyboard.GetState();
-
-            if (state.IsKeyDown(Keys.LeftControl)) Speed = 5f;
-            else Speed = 3f;
-
-            if (state.IsKeyDown(Keys.Z)) Velocity.Y = -Speed; //UP
-            if (state.IsKeyDown(Keys.S)) Velocity.Y = Speed; //DOWN
-
-            if (state.IsKeyDown(Keys.Q)) Velocity.X = -Speed; //LEFT
-            else if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; //RIGHT
-            else Velocity.X = 0f;
-
-            if (state.IsKeyDown(Keys.Space) && !IsFalling) IsFalling = true;
-        }
-
-        public override void Update(GameTime gameTime, List<IGObject> gObjects)
-        {
-            this.Move(gObjects);
-
             foreach (IGObject obj in gObjects)
             {
                 if (!(obj is Sprite)) continue;
                 Sprite sprite = obj as Sprite;
 
                 if (sprite.Equals(this)) continue;
-                
+
                 if (this.Intersects(sprite) && !sprite.CollisionBox.Collidable)
                 {
-                    if (sprite is Platform)
-                    {
-                        Debug.WriteLine("Intersects platform");
-
-                        Velocity.X = 0f;
-                        Velocity.Y = 0f;
-                        IsFalling = false;
-                        break;
-                    }
+                    Velocity.Y = 0f;
+                    IsFalling = false;
+                    break;
                 }
                 else
                 {
@@ -75,10 +50,35 @@ namespace The_Stella_Game.Sprites
                     IsFalling = true;
                 }
             }
-                    Position += Velocity;
-           
-            Velocity = Vector2.Zero;
 
+            if (Jumped)
+            {
+                //TODO
+            }
+
+
+            Position += Velocity;
+            Velocity = Vector2.Zero;
+        }
+
+        public override void Update(GameTime gameTime, List<IGObject> gObjects)
+        {
+            KeyboardState state = Keyboard.GetState();
+
+            if (state.IsKeyDown(Keys.LeftControl)) Speed = 5f;
+            else Speed = 3f;
+
+            if (state.IsKeyDown(Keys.Z)) Velocity.Y = -Speed; //UP
+            else if (state.IsKeyDown(Keys.S)) Velocity.Y = Speed; //DOWN
+            else Velocity.Y = 0f;
+
+            if (state.IsKeyDown(Keys.Q)) Velocity.X = -Speed; //LEFT
+            else if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; //RIGHT
+            else Velocity.X = 0f;
+
+            if (state.IsKeyDown(Keys.Space) && !IsFalling && !Jumped) Jumped = true;
+            
+            this.Move(gObjects);
 
             base.Update(gameTime, gObjects);
         }

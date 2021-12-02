@@ -12,10 +12,9 @@ namespace The_Stella_Game.Menus
 {
     public class StartMenu : Menu
     {
-        private Texture2D gameBackground;
         public StartMenu(Game1 game, GraphicsDeviceManager graphics, ContentManager content) : base (game, graphics, content)
         {
-            gameBackground = game.Content.Load<Texture2D>("Sprites\\Menu\\StellaStartScherm");
+            this.Background = content.Load<Texture2D>("Sprites\\Menu\\StellaStartScherm");
             Button StartButton = new Button(Content, "StartButton", new Vector2(600, 500));
             Button LevelsButton = new Button(Content, "LevelsButton", new Vector2(600, 610));
             Button QuitButton = new Button(Content, "QuitButton", new Vector2(600, 720));
@@ -49,15 +48,7 @@ namespace The_Stella_Game.Menus
             if (Keyboard.GetState().IsKeyDown(Keys.Enter)) Game.ChangeMenu(new GameMenu(Game, Graphics, Content));
             if (Keyboard.GetState().IsKeyDown(Keys.Escape)) System.Environment.Exit(0);
 
-
             base.Update(gameTime);
-        }
-
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
-        {
-            spriteBatch.Draw(gameBackground, new Rectangle(0, 0, 1700, 900), Color.White);
-
-            base.Draw(gameTime, spriteBatch);
         }
     }
 }

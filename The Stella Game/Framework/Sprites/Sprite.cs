@@ -23,15 +23,14 @@ namespace The_Stella_Game.Framework
         public Sprite(ContentManager content)
         {
             this.Content = content;
+            this.Velocity = new Vector2(0, 0);
         }
 
         public bool Intersects(Sprite sprite)
         {
             Rectangle box = CollisionBox.Box;
-            box.X += (int)Velocity.X; //+ (int) Velocity.X;
-            box.Y += (int)Velocity.Y; //+ (int) Velocity.Y;
-
-            //if (box.X == CollisionBox.Box.X && box.Y == CollisionBox.Box.Y) Debug.WriteLine("Same!!!"); 
+            box.X += (int) Velocity.X;
+            box.Y += (int) Velocity.Y;
 
             return box.Intersects(sprite.CollisionBox.Box);
         }
