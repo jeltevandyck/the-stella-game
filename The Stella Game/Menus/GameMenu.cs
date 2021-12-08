@@ -30,6 +30,10 @@ namespace The_Stella_Game.Menus
 
             //SpriteObjects.Add(new HealthBar(content, new Vector2(100, 100)));
 
+            //Coins
+
+            SpriteObjects.Add(new Coin(Content, 100, new Vector2(50, 50)));
+
             //Keys
             Key key = new Key(Content, new Vector2(1550, 42));
             SpriteObjects.Add(key);

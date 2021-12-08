@@ -19,7 +19,7 @@ namespace The_Stella_Game.Sprites
             this.Texture = content.Load<Texture2D>("Sprites\\Platform\\" + sheet);
             this.Position = spawnPosition;
             MoveRange = 260;
-            this.Position = spawnPosition;
+            SpawnPosition = spawnPosition;
 
             this.CollisionBox = new CollisionBox(spawnPosition, Texture.Width, Texture.Height, 0, 0, false);
         }
