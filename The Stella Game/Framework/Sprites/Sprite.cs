@@ -26,13 +26,18 @@ namespace The_Stella_Game.Framework
             this.Velocity = new Vector2(0, 0);
         }
 
-        public bool Intersects(Sprite sprite)
+        public bool DetectCollision(Sprite sprite)
         {
             Rectangle box = CollisionBox.Box;
             box.X += (int) Velocity.X;
             box.Y += (int) Velocity.Y;
 
             return box.Intersects(sprite.CollisionBox.Box);
+        }
+
+        public virtual void Intersects(Sprite sprite)
+        {
+
         }
 
         public virtual void Update(GameTime gameTime, List<IGObject> gObjects)

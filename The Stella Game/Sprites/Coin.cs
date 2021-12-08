@@ -10,8 +10,8 @@ namespace The_Stella_Game.Sprites
 {
     public class Coin : SpriteAnimation
     {
-        public decimal Coins;
-        public Coin(ContentManager content, decimal coins, Vector2 spawnPosition) : base(content) {
+        public double Coins;
+        public Coin(ContentManager content, double coins, Vector2 spawnPosition) : base(content) {
             this.Coins = coins;
             this.Texture = content.Load<Texture2D>("Sprites\\Coin\\SpriteSheetCoin");
 

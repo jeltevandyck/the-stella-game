@@ -14,9 +14,10 @@ namespace The_Stella_Game.Sprites
     {
         public int Health { get; private set; } = 3;
         public int Quantity { get; private set; } = 1;
-        public decimal Coins { get; private set; } = 0;
+        public decimal Score { get; private set; } = 0;
         public bool IsFalling { get; private set; } = false;
         public bool Jumped { get; private set; } = false;
+
         public StellaPlayer(ContentManager contentManager, Vector2 spawnPosition) : base(contentManager, spawnPosition)
         {
             this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaQuarterGlassSideWays");
@@ -38,8 +39,10 @@ namespace The_Stella_Game.Sprites
 
                 if (sprite.Equals(this)) continue;
 
-                if (this.Intersects(sprite) && !sprite.CollisionBox.Collidable)
+                if (this.DetectCollision(sprite) && !sprite.CollisionBox.Collidable)
                 {
+
+                    this.Intersects(sprite);
                     Velocity.Y = 0f;
                     IsFalling = false;
                     break;
@@ -61,6 +64,13 @@ namespace The_Stella_Game.Sprites
             Velocity = Vector2.Zero;
         }
 
+        public override void Intersects(Sprite sprite)
+        {
+            if (sprite is Coin)
+            {
+
+            }
+        }
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
             KeyboardState state = Keyboard.GetState();
