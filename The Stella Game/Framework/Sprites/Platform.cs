@@ -17,11 +17,6 @@ namespace The_Stella_Game.Framework
             this.CollisionBox = new CollisionBox(spawnPosition, Texture.Width, Texture.Height, 0, 0, false);
         }
 
-        public override void Update(GameTime gameTime, List<IGObject> gObjects)
-        {
-
-        }
-
         public override void Draw(GameTime gameTime, SpriteBatch spritebatch)
         {
             spritebatch.Draw(Texture, CollisionBox.Box, Color.White);
