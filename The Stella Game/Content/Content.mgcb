@@ -385,6 +385,30 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/Player/SpriteSheetStellaEmptyGlassSideways.png
 
+#begin Sprites/Player/SpriteSheetStellaGlassSideways.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Player/SpriteSheetStellaGlassSideways.png
+
+#begin Sprites/Player/SpriteSheetStellaHalfFullGlassGlassSideways.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Player/SpriteSheetStellaHalfFullGlassGlassSideways.png
+
 #begin Sprites/Player/SpriteSheetStellaQuarterGlassSideWays.png
 /importer:TextureImporter
 /processor:TextureProcessor
