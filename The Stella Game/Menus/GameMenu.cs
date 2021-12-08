@@ -54,7 +54,7 @@ namespace The_Stella_Game.Menus
             SpriteObjects.Add(new Platform(Content, "H1", new Vector2(0, 550)));
             SpriteObjects.Add(new Platform(Content, "H1", new Vector2(459, 550)));
             SpriteObjects.Add(new Platform(Content, "H2", new Vector2(919, 551)));
-            SpriteObjects.Add(new Platform(Content, "H2", new Vector2(1300, 400)));
+            SpriteObjects.Add(new PlatformMove(Content, "H2", new Vector2(1300, 400)));
 
 
             SpriteObjects.Add(new Platform(Content, "H1", new Vector2(0, 700)));
