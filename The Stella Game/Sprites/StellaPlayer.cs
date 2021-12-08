@@ -41,27 +41,44 @@ namespace The_Stella_Game.Sprites
 
                 if (this.DetectCollision(sprite) && !sprite.CollisionBox.Collidable)
                 {
-
                     this.Intersects(sprite);
+
                     Velocity.Y = 0f;
+
+                    if (this.IsTouchingLeft(sprite) && Velocity.X > 0) Velocity.X = 0f;
+                    else if (this.IsTouchingRight(sprite) && Velocity.X < 0) Velocity.X = 0f;
+
                     IsFalling = false;
                     break;
                 }
                 else
                 {
-                    Velocity.Y = Speed;
-                    IsFalling = true;
+                    if (!Jumped)
+                    {
+                        Velocity.Y = Speed;
+                        IsFalling = true;
+                    }
+                    
                 }
             }
 
-            if (Jumped)
-            {
-                //TODO
-            }
-
-
             Position += Velocity;
             Velocity = Vector2.Zero;
+
+            bool flag = false;
+            if (Jumped)
+            {
+                Position.Y -= 10f;
+
+                flag = true;
+                Jumped = false;
+            }
+
+            if (flag == true) Velocity.Y += 0.15f * 1;
+
+            if (Position.Y + Texture.Height >= 100) flag = false;
+
+            if (Jumped) Velocity.Y = 0f;
         }
 
         public override void Intersects(Sprite sprite)
