@@ -31,12 +31,17 @@ namespace The_Stella_Game.Menus
             //SpriteObjects.Add(new HealthBar(content, new Vector2(100, 100)));
 
             //Coins
-
-            SpriteObjects.Add(new Coin(Content, 100, new Vector2(50, 50)));
+            SpriteObjects.Add(new Coin(Content,  new Vector2(300, 100)));
+            SpriteObjects.Add(new Coin(Content,  new Vector2(500, 100)));
+            SpriteObjects.Add(new Coin(Content,  new Vector2(800, 100)));
+            SpriteObjects.Add(new Coin(Content,  new Vector2(1000, 100)));
+            SpriteObjects.Add(new Coin(Content, new Vector2(1600, 220)));
+            SpriteObjects.Add(new Coin(Content,  new Vector2(1300, 220)));
 
             //Keys
-            Key key = new Key(Content, new Vector2(1550, 42));
-            SpriteObjects.Add(key);
+            SpriteObjects.Add(new Key(Content, new Vector2(1500, 45)));
+            SpriteObjects.Add(new Key(Content, new Vector2(10, 460)));
+            SpriteObjects.Add(new Key(Content, new Vector2(10, 760)));
 
             //Platforms
             SpriteObjects.Add(new Platform(Content, "H4", new Vector2(0, 49)));

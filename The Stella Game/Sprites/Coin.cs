@@ -10,17 +10,31 @@ namespace The_Stella_Game.Sprites
 {
     public class Coin : SpriteAnimation
     {
-        public double Coins;
-        public Coin(ContentManager content, double coins, Vector2 spawnPosition) : base(content) {
-            this.Coins = coins;
+        public double Value = 100;
+
+        public bool Found;
+
+        public Coin(ContentManager content, Vector2 spawnPosition) : base(content) {
+
             this.Texture = content.Load<Texture2D>("Sprites\\Coin\\SpriteSheetCoin");
 
-            this.CollisionBox = new CollisionBox(spawnPosition, 40, 40);
+            this.Position = spawnPosition;
 
+            this.CollisionBox = new CollisionBox(spawnPosition, 40, 40);
             this.Add(new AnimationFrame(new Rectangle(0, 0, 50, 50)));
             this.Add(new AnimationFrame(new Rectangle(50, 0, 50, 50)));
             this.Add(new AnimationFrame(new Rectangle(100, 0, 50, 50)));
             this.Add(new AnimationFrame(new Rectangle(150, 0, 50, 50)));
+        }
+
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            if (!Found)
+            {
+                base.Draw(gameTime, spriteBatch);
+            }
+            
+            
         }
 
         public override string ToString()

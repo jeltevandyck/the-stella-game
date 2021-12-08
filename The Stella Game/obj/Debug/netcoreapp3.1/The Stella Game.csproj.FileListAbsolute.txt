@@ -206,3 +206,5 @@ C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\obj\Deb
 C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.dll
 C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.pdb
 C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.genruntimeconfig.cache
+C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaGlassSideways.xnb
+C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaHalfFullGlassGlassSideways.xnb
