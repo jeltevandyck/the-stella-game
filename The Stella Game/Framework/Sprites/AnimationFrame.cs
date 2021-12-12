@@ -8,9 +8,13 @@ namespace The_Stella_Game.Framework
     public class AnimationFrame
     {
         public Rectangle Rectangle;
-        public AnimationFrame(Rectangle rect)
+
+        public int FrameSpeed;
+
+        public AnimationFrame(Rectangle rect, int frameSpeed)
         {
             Rectangle = rect;
+            FrameSpeed = frameSpeed;
         }
     }
 }

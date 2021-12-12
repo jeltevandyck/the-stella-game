@@ -12,10 +12,13 @@ namespace The_Stella_Game.Framework
         public int X_Invert = 0;
         public int Y_Invert = 0;
 
+        public int Width { get;  set; }
+        public int Height { get;  set; }
         public Boolean Collidable = false;
 
         public CollisionBox(Vector2 position, int width, int height) : this(position, width, height, 0, 0, false)
         { }
+
 
         public CollisionBox(Vector2 position, int width, int height, int x_invert, int y_invert, bool collidable)
         {
@@ -23,7 +26,11 @@ namespace The_Stella_Game.Framework
             this.X_Invert = x_invert;
             this.Y_Invert = y_invert;
             this.Collidable = collidable;
+
+            this.Width = width;
+            this.Height = height;
         }
+
 
         public void Update(Vector2 position)
         {

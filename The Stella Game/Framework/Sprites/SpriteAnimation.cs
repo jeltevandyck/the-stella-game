@@ -34,7 +34,7 @@ namespace The_Stella_Game.Framework
             CurrentFrame = _animationFrames[index];
 
             frameMovement += CurrentFrame.Rectangle.Width * gameTime.ElapsedGameTime.TotalSeconds;
-            if (frameMovement >= CurrentFrame.Rectangle.Width / 5)
+            if (frameMovement >= CurrentFrame.Rectangle.Width / CurrentFrame.FrameSpeed)
             {
                 index++;
                 frameMovement = 0;
