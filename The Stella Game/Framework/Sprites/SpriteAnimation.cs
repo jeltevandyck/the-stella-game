@@ -13,7 +13,7 @@ namespace The_Stella_Game.Framework
         public AnimationFrame CurrentFrame { get; private set; }
         private List<AnimationFrame> _animationFrames;
 
-        private int index = 0;
+        public int Index { get; private set; } = 0;
         private double frameMovement = 0;
 
         private Texture2D RectangleTexture;
@@ -31,16 +31,16 @@ namespace The_Stella_Game.Framework
 
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
-            CurrentFrame = _animationFrames[index];
+            CurrentFrame = _animationFrames[Index];
 
             frameMovement += CurrentFrame.Rectangle.Width * gameTime.ElapsedGameTime.TotalSeconds;
             if (frameMovement >= CurrentFrame.Rectangle.Width / CurrentFrame.FrameSpeed)
             {
-                index++;
+                Index++;
                 frameMovement = 0;
             }
 
-            if (index >= _animationFrames.Count) index = 0;
+            if (Index >= _animationFrames.Count) Index = 0;
 
             base.Update(gameTime, gObjects);
         }
