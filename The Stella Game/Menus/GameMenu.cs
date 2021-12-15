@@ -28,7 +28,8 @@ namespace The_Stella_Game.Menus
             miniBossHeineken.SetRectangleTexture(Game.GraphicsDevice, miniBossHeineken.Texture);
             SpriteObjects.Add(miniBossHeineken);
 
-            //SpriteObjects.Add(new HealthBar(content, new Vector2(100, 100)));
+            //Bar
+            SpriteObjects.Add(new HealthBar(content, new Vector2(750, 0)));
 
             //Door
 
@@ -42,12 +43,29 @@ namespace The_Stella_Game.Menus
             SpriteObjects.Add(new Coin(Content, new Vector2(1600, 220)));
             SpriteObjects.Add(new Coin(Content, new Vector2(1300, 220)));
             
-
-
             //Keys
             SpriteObjects.Add(new Key(Content, new Vector2(1500, 45)));
             SpriteObjects.Add(new Key(Content, new Vector2(10, 460)));
             SpriteObjects.Add(new Key(Content, new Vector2(10, 760)));
+
+            //Spikes
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(459, 510)));
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(489, 510)));
+
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(599, 510)));
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(629, 510)));
+
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(729, 510)));
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(759, 510)));
+
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(859, 510)));
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(899, 510)));
+
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(989, 510)));
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(1019, 510)));
+
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(1109, 510)));
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(1139, 510)));
 
             //Platforms
             SpriteObjects.Add(new Platform(Content, "H4", new Vector2(0, 49)));
@@ -83,24 +101,6 @@ namespace The_Stella_Game.Menus
             SpriteObjects.Add(new Platform(Content, "H1", new Vector2(1377, 853)));
 
 
-            //Spikes
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(459, 510)));
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(489, 510)));
-
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(599, 510)));
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(629, 510)));
-
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(729, 510)));
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(759, 510)));
-
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(859, 510)));
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(899, 510)));
-
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(989, 510)));
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(1019, 510)));
-
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(1109, 510)));
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(1139, 510)));
         }
 
         public override void Update(GameTime gameTime)
