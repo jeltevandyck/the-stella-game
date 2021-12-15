@@ -22,6 +22,8 @@ namespace The_Stella_Game.Sprites
 
         private Game1 Game;
 
+        private Cooldown damageCooldown;
+
         public StellaPlayer(Game1 game, ContentManager contentManager, Vector2 spawnPosition) : base(contentManager, spawnPosition)
         {
             this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaEmptyGlassSideways");
@@ -32,6 +34,8 @@ namespace The_Stella_Game.Sprites
             this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 99), 5));
             this.Add(new AnimationFrame(new Rectangle(200, 0, 100, 99), 5));
             this.Add(new AnimationFrame(new Rectangle(300, 0, 100, 99), 5));
+
+            damageCooldown = new Cooldown(2f);
         }
 
         public override void Move(List<IGObject> gObjects)
@@ -43,7 +47,7 @@ namespace The_Stella_Game.Sprites
 
                 if (sprite.Equals(this)) continue;
 
-                if (this.DetectCollision(sprite) && !sprite.CollisionBox.Collidable)
+                if (this.DetectCollision(sprite))
                 {
                     this.Intersects(sprite);
 
@@ -123,15 +127,29 @@ namespace The_Stella_Game.Sprites
 
             if (sprite is Spike)
             {
-                this.Health -= 1;
-
-                Debug.WriteLine("HIt the spike");
+                Spike s = sprite as Spike;
+                if (s.State == SpikeState.UP)
+                {
+                    if (!damageCooldown.Enabled) this.Health -= 1;
+                    damageCooldown.Enabled = true;
+                }
+                else
+                {
+                    s.CollisionBox.Box = Rectangle.Empty;
+                }
             }
 
-            
+            if (sprite is MiniBoss)
+            {
+                MiniBoss miniBoss = sprite as MiniBoss;
+                
+                this.Health -= 1;
+            }
         }
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
+            damageCooldown.Update(gameTime);
+
             KeyboardState state = Keyboard.GetState();
 
             if (state.IsKeyDown(Keys.LeftControl)) Speed = 5f;
@@ -145,10 +163,13 @@ namespace The_Stella_Game.Sprites
             else if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; //RIGHT
             else Velocity.X = 0f;
 
-            if (state.IsKeyDown(Keys.Space) && !IsFalling)
+            if (state.IsKeyDown(Keys.Space) && !Jumped)
             {
-                Jumped = true;
+                    Jumped = true;
             }
+
+            if (this.Health == 0) Game.ChangeMenu(new GameOverMenu(Game, Graphics, Content));
+            
             this.Move(gObjects);
 
             base.Update(gameTime, gObjects);
