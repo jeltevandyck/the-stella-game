@@ -3,32 +3,30 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using The_Stella_Game.Framework;
 
 namespace The_Stella_Game.Sprites
 {
-    public class HealthBar : IGObject
+    public class HealthBar : Bar
     {
-        public ContentManager Content { get; private set; }
 
-        public Vector2 Position;
         public CollisionBox CollisionBox;
 
         private List<Heart> hearts;
-        public HealthBar(ContentManager content, Vector2 spawnPosition)
+        public HealthBar(ContentManager content, Vector2 spawnPosition) : base(content, spawnPosition)
         {
-            this.Position = spawnPosition;
             this.CollisionBox = new CollisionBox(spawnPosition, 100,100);
             hearts = new List<Heart>();
 
             for (int i = 0; i < 3; i++)
             {
-                hearts.Add(new Heart(content, new Vector2(0, (i+1)*30)));
+                hearts.Add(new Heart(content, new Vector2(0, (i + 1) * 30)));
             }
         }
 
-        public void Update(GameTime gameTime, List<IGObject> gObjects)
+        public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
             StellaPlayer player = null;
             foreach (IGObject obj in gObjects)
@@ -40,14 +38,36 @@ namespace The_Stella_Game.Sprites
                 }
             }
 
-            for (int i = 0; i < 3 - player.Health; i++)
+            hearts.Clear();
+
+            int lives = player.Health;
+            int deaths = (3 - player.Health) > 3 ? 3 : (3 - player.Health);
+
+            int index_x = 0;
+
+            for (int i = 0; i < lives; i++)
             {
-                hearts[i].Usable = false;
+                Heart heart = new Heart(Content, new Vector2(Position.X + index_x, Position.Y));
+                heart.Usable = true;
+                index_x += 30;
+                hearts.Add(heart);
             }
 
+            for (int i = 0; i < deaths; i++)
+            {
+                Heart heart = new Heart(Content, new Vector2(Position.X + index_x, Position.Y));
+                heart.Usable = false;
+                index_x += 30;
+                hearts.Add(heart);
+            }
+
+            foreach (Heart heart in hearts)
+            {
+                heart.Update(gameTime, gObjects);
+            }
         }
 
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             foreach (Heart heart in hearts)
             {

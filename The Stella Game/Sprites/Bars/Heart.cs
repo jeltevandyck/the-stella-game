@@ -24,9 +24,14 @@ namespace The_Stella_Game.Sprites
 
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
-            this.Texture = Content.Load<Texture2D>("Sprites\\Hearts\\" + Usable);
+            this.Texture = Content.Load<Texture2D>("Sprites\\Hearts\\" + TextureName);
 
             base.Update(gameTime, gObjects);
+        }
+
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(Texture, CollisionBox.Box, Color.White);
         }
     }
 }

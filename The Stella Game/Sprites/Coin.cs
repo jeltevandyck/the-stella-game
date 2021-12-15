@@ -28,7 +28,6 @@ namespace The_Stella_Game.Sprites
             if (!Found)
             {
                 base.Draw(gameTime, spriteBatch);
-                
             }
             else
             {
