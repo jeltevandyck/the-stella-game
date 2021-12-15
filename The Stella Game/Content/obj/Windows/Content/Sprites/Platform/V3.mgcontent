@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/V3.png</SourceFile>
-  <SourceTime>2021-12-01T13:06:56.0710018+01:00</SourceTime>
+  <SourceTime>2021-12-15T13:04:27.2983507+01:00</SourceTime>
   <DestFile>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/bin/Windows/Content/Sprites/Platform/V3.xnb</DestFile>
-  <DestTime>2021-12-08T14:07:27.6759458+01:00</DestTime>
+  <DestTime>2021-12-15T13:04:31.5489841+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T17:17:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

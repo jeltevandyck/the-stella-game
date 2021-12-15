@@ -26,10 +26,10 @@ namespace The_Stella_Game.Sprites
             this.CollisionBox = new CollisionBox(spawnPosition, 25, 60, 20, 0, true);
             this.WalkRange = walkrange;
 
-            this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 100)));
-            this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 100)));
-            this.Add(new AnimationFrame(new Rectangle(200, 0, 100, 100)));
-            this.Add(new AnimationFrame(new Rectangle(300, 0, 100, 100)));
+            this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 100), 5));
+            this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 100), 5));
+            this.Add(new AnimationFrame(new Rectangle(200, 0, 100, 100), 5));
+            this.Add(new AnimationFrame(new Rectangle(300, 0, 100, 100), 5));
         }
 
         public override void Move(List<IGObject> gObjects)

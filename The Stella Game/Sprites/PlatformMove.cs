@@ -27,7 +27,6 @@ namespace The_Stella_Game.Sprites
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
             int walkedDistance = ((int) Position.Y - (int) SpawnPosition.Y) + 2;
-            Debug.WriteLine(walkedDistance);
             if (walkedDistance <= MoveRange && !_backToSpawn)
             {
                 Velocity.Y = 2f;

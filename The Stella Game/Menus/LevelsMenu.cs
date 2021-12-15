@@ -33,12 +33,12 @@ namespace The_Stella_Game.Menus
 
         private void level1Button_Click(object sender, EventArgs e)
         {
-            Game.ChangeMenu(new StartMenu(Game, Graphics, Content));
+            Game.ChangeMenu(new GameMenu(Game, Graphics, Content));
         }
 
         private void level2Button_Click(object sender, EventArgs e)
         {
-            Game.ChangeMenu(new StartMenu(Game, Graphics, Content));
+            Game.ChangeMenu(new Level2(Game, Graphics, Content));
         }
 
         public override void Update(GameTime gameTime)

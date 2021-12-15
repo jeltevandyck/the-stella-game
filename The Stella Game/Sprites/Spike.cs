@@ -15,12 +15,21 @@ namespace The_Stella_Game.Sprites
             this.Texture = content.Load<Texture2D>("Sprites\\Obstacles\\" + sheet);
             this.Position = spawnPosition;
 
-            this.CollisionBox = new CollisionBox(spawnPosition, 30, 50, 20, 0, true);
+            this.CollisionBox = new CollisionBox(spawnPosition, 30, 50, 20,0,false);
 
-            this.Add(new AnimationFrame(new Rectangle(0, 0, 116, 78)));
-            this.Add(new AnimationFrame(new Rectangle(116, 0, 116, 78)));
-            this.Add(new AnimationFrame(new Rectangle(232, 0, 116, 78)));
-            this.Add(new AnimationFrame(new Rectangle(348, 0, 116, 78)));
+            this.Add(new AnimationFrame(new Rectangle(0, 0, 116, 78),1));
+            this.Add(new AnimationFrame(new Rectangle(116, 0, 116, 78), 2));
+            this.Add(new AnimationFrame(new Rectangle(232, 0, 116, 78), 2));
+            this.Add(new AnimationFrame(new Rectangle(348, 0, 116, 78), 2));
         }
+
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+
+            base.Draw(gameTime, spriteBatch);
+
+        }
+
+
     }
 }

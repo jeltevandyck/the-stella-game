@@ -7,27 +7,31 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using The_Stella_Game.Framework;
 using System.Diagnostics;
+using The_Stella_Game.Menus;
 
 namespace The_Stella_Game.Sprites
 {
+
     public class StellaPlayer : AnimationEntity
     {
         public int Health { get; private set; } = 3;
-        public int Quantity { get; private set; } = 1;
-        public decimal Score { get; private set; } = 0;
-        public bool IsFalling { get; private set; } = false;
+        public int KeyQuantity { get; private set; } = 0;
+        public double Score { get; private set; } = 0;
         public bool Jumped { get; private set; } = false;
+        public bool IsFalling { get; private set; } = false;
 
-        public StellaPlayer(ContentManager contentManager, Vector2 spawnPosition) : base(contentManager, spawnPosition)
+        private Game1 Game;
+
+        public StellaPlayer(Game1 game, ContentManager contentManager, Vector2 spawnPosition) : base(contentManager, spawnPosition)
         {
-            this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaQuarterGlassSideWays");
-
+            this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaEmptyGlassSideways");
+            this.Game = game;
             this.CollisionBox = new CollisionBox(spawnPosition, 25, 47, 20, 0, true);
 
-            this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 99)));
-            this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 99)));
-            this.Add(new AnimationFrame(new Rectangle(200, 0, 100, 99)));
-            this.Add(new AnimationFrame(new Rectangle(300, 0, 100, 99)));
+            this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 99), 5));
+            this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 99), 5));
+            this.Add(new AnimationFrame(new Rectangle(200, 0, 100, 99), 5));
+            this.Add(new AnimationFrame(new Rectangle(300, 0, 100, 99), 5));
         }
 
         public override void Move(List<IGObject> gObjects)
@@ -62,31 +66,69 @@ namespace The_Stella_Game.Sprites
                 }
             }
 
+            if (Position.X + Velocity.X + CollisionBox.Box.Width >= Game1.MAX_WIDTH && Velocity.X > 0) Velocity.X = 0;
+            if (Position.X <= 0 && Velocity.X < 0) Velocity.X = 0;
+
             Position += Velocity;
             Velocity = Vector2.Zero;
 
-            bool flag = false;
             if (Jumped)
             {
-                Position.Y -= 10f;
-
-                flag = true;
+                Position.Y -= 5f;
+                Velocity.Y = 0f;
                 Jumped = false;
             }
 
-            if (flag == true) Velocity.Y += 0.15f * 1;
 
-            if (Position.Y + Texture.Height >= 100) flag = false;
-
-            if (Jumped) Velocity.Y = 0f;
         }
 
         public override void Intersects(Sprite sprite)
         {
             if (sprite is Coin)
             {
+                Coin coin = sprite as Coin;
+
+                if (!coin.Found)
+                {
+                    this.Score += coin.Value;
+                    coin.Found = true;
+
+                }
 
             }
+
+            if (sprite is Key)
+            {
+                Key key = sprite as Key;
+
+                if (!key.Found)
+                {
+                    this.KeyQuantity += 1;
+                    this.Score += key.Value;
+                    key.Found = true;
+                }
+
+            }
+
+            if (sprite is Door)
+            {
+                
+                if (this.KeyQuantity == 3)
+                {
+                    this.KeyQuantity = 0;
+                    this.Game.ChangeMenu(new Level2(Game, Graphics, Content));
+                    
+                }
+            }
+
+            if (sprite is Spike)
+            {
+                this.Health -= 1;
+
+                Debug.WriteLine("HIt the spike");
+            }
+
+            
         }
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
@@ -103,13 +145,35 @@ namespace The_Stella_Game.Sprites
             else if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; //RIGHT
             else Velocity.X = 0f;
 
-            if (state.IsKeyDown(Keys.Space) && !IsFalling && !Jumped) Jumped = true;
-            
+            if (state.IsKeyDown(Keys.Space) && !IsFalling)
+            {
+                Jumped = true;
+            }
             this.Move(gObjects);
 
             base.Update(gameTime, gObjects);
         }
 
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            if (this.KeyQuantity == 0)
+            {
+                this.Texture = Content.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaEmptyGlassSideways");
+            }
+            else if (this.KeyQuantity == 1)
+            {
+                this.Texture = Content.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaQuarterGlassSideWays");
+            }
+            else if (this.KeyQuantity == 2)
+            {
+                this.Texture = Content.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaHalfFullGlassGlassSideways");
+            }
+            else if (this.KeyQuantity == 3)
+            {
+                this.Texture = Content.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaGlassSideways");
+            }
+            base.Draw(gameTime, spriteBatch);
+        }
         public override string ToString()
         {
             return "StellaPlayer";
