@@ -49,6 +49,27 @@ namespace The_Stella_Game.Menus
             SpriteObjects.Add(new Key(Content, new Vector2(10, 460)));
             SpriteObjects.Add(new Key(Content, new Vector2(10, 760)));
 
+            //Spikes
+            Spike s = new Spike(Content, "SpriteSheetSpikeLong", new Vector2(459, 510));
+            s.SetRectangleTexture(Game.GraphicsDevice, s.Texture);
+            SpriteObjects.Add(s);
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(489, 510)));
+
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(599, 510)));
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(629, 510)));
+
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(729, 510)));
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(759, 510)));
+
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(859, 510)));
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(899, 510)));
+
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(989, 510)));
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(1019, 510)));
+
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(1109, 510)));
+            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(1139, 510)));
+
             //Platforms
             SpriteObjects.Add(new Platform(Content, "H4", new Vector2(0, 49)));
 
@@ -82,25 +103,6 @@ namespace The_Stella_Game.Menus
             SpriteObjects.Add(new Platform(Content, "H1", new Vector2(918, 853)));
             SpriteObjects.Add(new Platform(Content, "H1", new Vector2(1377, 853)));
 
-
-            //Spikes
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(459, 510)));
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(489, 510)));
-
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(599, 510)));
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(629, 510)));
-
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(729, 510)));
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(759, 510)));
-
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(859, 510)));
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(899, 510)));
-
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(989, 510)));
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(1019, 510)));
-
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(1109, 510)));
-            SpriteObjects.Add(new Spike(Content, "SpriteSheetSpikeLong", new Vector2(1139, 510)));
         }
 
         public override void Update(GameTime gameTime)

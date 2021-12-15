@@ -15,12 +15,15 @@ namespace The_Stella_Game.Sprites
     public class StellaPlayer : AnimationEntity
     {
         public int Health { get; private set; } = 3;
-        public int KeyQuantity { get; private set; } = 0;
+        public int KeyQuantity { get; private set; } = 2;
         public double Score { get; private set; } = 0;
         public bool Jumped { get; private set; } = false;
         public bool IsFalling { get; private set; } = false;
 
         private Game1 Game;
+
+        bool CooldownEnabled = false;
+        float Cooldown = 2f;
 
         public StellaPlayer(Game1 game, ContentManager contentManager, Vector2 spawnPosition) : base(contentManager, spawnPosition)
         {
@@ -62,7 +65,7 @@ namespace The_Stella_Game.Sprites
                         Velocity.Y = Speed;
                         IsFalling = true;
                     }
-                    
+
                 }
             }
 
@@ -112,23 +115,39 @@ namespace The_Stella_Game.Sprites
 
             if (sprite is Door)
             {
-                
+
                 if (this.KeyQuantity == 3)
                 {
                     this.KeyQuantity = 0;
                     this.Game.ChangeMenu(new Level2(Game, Graphics, Content));
-                    
+
                 }
             }
 
             if (sprite is Spike)
             {
-                this.Health -= 1;
 
-                Debug.WriteLine("HIt the spike");
+                Debug.WriteLine("Hit spike!");
+                Spike s = sprite as Spike;
+
+                if (s.state == SpikeState.UP)
+                {
+                    if (!CooldownEnabled)
+                    {
+                        Debug.WriteLine("Damage!");
+                        this.Health -= 1;
+                    }
+                    CooldownEnabled = true;
+                }
+                else
+                {
+                    s.CollisionBox.Box = Rectangle.Empty;
+                }
+
+
+
             }
 
-            
         }
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
@@ -148,6 +167,22 @@ namespace The_Stella_Game.Sprites
             if (state.IsKeyDown(Keys.Space) && !IsFalling)
             {
                 Jumped = true;
+            }
+
+            if (this.Health == 0)
+            {
+                Game.ChangeMenu(new GameOver(Game, Graphics, Content));
+            }
+
+            if (CooldownEnabled)
+            {
+                Cooldown -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+                if (Cooldown <= 0f)
+                {
+                    CooldownEnabled = false;
+                    Cooldown = 2f;
+                }
             }
             this.Move(gObjects);
 

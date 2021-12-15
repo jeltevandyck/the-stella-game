@@ -8,8 +8,14 @@ using The_Stella_Game.Framework;
 
 namespace The_Stella_Game.Sprites
 {
+    public enum SpikeState
+    {
+        DOWN,
+        UP
+    }
     public class Spike : SpriteAnimation
     {
+        public SpikeState state;
         public Spike(ContentManager content, string sheet, Vector2 spawnPosition) : base(content)
         {
             this.Texture = content.Load<Texture2D>("Sprites\\Obstacles\\" + sheet);
@@ -23,6 +29,19 @@ namespace The_Stella_Game.Sprites
             this.Add(new AnimationFrame(new Rectangle(348, 0, 116, 78), 2));
         }
 
+        public override void Update(GameTime gameTime, List<IGObject> gObjects)
+        {
+            if (Index == 0)
+            {
+                state = SpikeState.DOWN;
+            }
+            else
+            {
+                state = SpikeState.UP;
+            }
+
+            base.Update(gameTime, gObjects);
+        }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
 

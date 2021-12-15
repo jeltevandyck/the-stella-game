@@ -4,44 +4,46 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Button/BackButton.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Button/Level1Button.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Button/Level2Button.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Button/LevelsButton.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Button/QuitButton.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Button/StartButton.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Coin/SpriteSheetCoin.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Door/Door.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Hearts/Heart.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Hearts/HeartGrey.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Key/VatBierPixilated.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Menu/BackgroundLevel1.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Menu/BackgroundLevel2.jpg</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Menu/StellaGameOverScherm.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Menu/StellaLevelsScherm.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Menu/StellaStartScherm.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetCristalSideways.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetHeinekenSideways.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetMaesSideways.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Obstacles/SpriteSheetSpikeLong.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/H1.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/H2.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/H3.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/H4.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/H5.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/H6.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/V1.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/V2.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/V3.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/V4.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/V5.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Platform/V6.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaEmptyGlassSideways.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaGlassSideways.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaHalfFullGlassGlassSideways.png</File>
-    <File>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaQuarterGlassSideWays.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Button/BackButton.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Button/Level1Button.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Button/Level2Button.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Button/LevelsButton.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Button/QuitButton.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Button/RestartButton.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Button/StartButton.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Coin/SpriteSheetCoin.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Door/Door.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Hearts/Heart.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Hearts/HeartGrey.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Key/VatBierPixilated.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Menu/BackgroundLevel1.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Menu/BackgroundLevel2.jpg</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Menu/StellaGameOverScherm.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Menu/StellaLevelsScherm.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Menu/StellaStartScherm.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetCristalSideways.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetHeinekenSideways.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Miniboss/SpriteSheetMaesSideways.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Obstacles/SpriteSheetSpikeLong.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Platform/H1.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Platform/H2.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Platform/H3.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Platform/H4.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Platform/H5.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Platform/H6.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Platform/V1.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Platform/V2.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Platform/V3.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Platform/V4.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Platform/V5.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Platform/V6.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaEmptyGlassSideways.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaGlassSideways.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaHalfFullGlassGlassSideways.png</File>
+    <File>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaQuarterGlassSideWays.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
