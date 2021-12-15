@@ -30,7 +30,7 @@ namespace The_Stella_Game.Sprites
             }
 
             int deaths = 3 - lives;
-            for (int i = 0; i < lives; i++)
+            for (int i = 0; i < deaths; i++)
             {
                 SpriteObjects.Add(new Heart(Content, new Vector2(Position.X + (30 * (i + 1)), Position.Y), false));
             }
