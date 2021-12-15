@@ -18,6 +18,7 @@ namespace The_Stella_Game.Sprites
         public int KeyQuantity { get; private set; } = 0;
         public double Score { get; private set; } = 0;
         public bool Jumped { get; private set; } = false;
+        public bool IsFalling { get; private set; } = false;
 
         private Game1 Game;
 
@@ -50,6 +51,8 @@ namespace The_Stella_Game.Sprites
 
                     if (this.IsTouchingLeft(sprite) && Velocity.X > 0) Velocity.X = 0f;
                     else if (this.IsTouchingRight(sprite) && Velocity.X < 0) Velocity.X = 0f;
+
+                    IsFalling = false;
                     break;
                 }
                 else
@@ -57,13 +60,18 @@ namespace The_Stella_Game.Sprites
                     if (!Jumped)
                     {
                         Velocity.Y = Speed;
+                        IsFalling = true;
                     }
                     
                 }
             }
 
+            if (Position.X + Velocity.X + CollisionBox.Box.Width >= Game1.MAX_WIDTH && Velocity.X > 0) Velocity.X = 0;
+            if (Position.X <= 0 && Velocity.X < 0) Velocity.X = 0;
+
             Position += Velocity;
             Velocity = Vector2.Zero;
+
             if (Jumped)
             {
                 Position.Y -= 5f;
@@ -137,7 +145,7 @@ namespace The_Stella_Game.Sprites
             else if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; //RIGHT
             else Velocity.X = 0f;
 
-            if (state.IsKeyDown(Keys.Space))
+            if (state.IsKeyDown(Keys.Space) && !IsFalling)
             {
                 Jumped = true;
             }

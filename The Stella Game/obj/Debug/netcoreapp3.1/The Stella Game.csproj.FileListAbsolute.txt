@@ -26,7 +26,6 @@ C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-arm\native\libuv.dll
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\libuv.dll
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\libuv.dll
-C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.csproj.AssemblyReference.cache
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.AssemblyInfoInputs.cache
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.AssemblyInfo.cs
@@ -210,3 +209,7 @@ C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\bin\Deb
 C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaGlassSideways.xnb
 C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaHalfFullGlassGlassSideways.xnb
 C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Menu\BackgroundLevel2.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Door\Door.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Menu\BackgroundLevel2.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaGlassSideways.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaHalfFullGlassGlassSideways.xnb
