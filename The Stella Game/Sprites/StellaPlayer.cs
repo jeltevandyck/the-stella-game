@@ -201,8 +201,11 @@ namespace The_Stella_Game.Sprites
                     Jumped = true;
             }
 
-            if (this.Health == 0) Game.ChangeMenu(new GameOverMenu(Game, Graphics, Content));
-
+            if (this.Health == 0)
+            {
+                Game.ChangeMenu(new GameOverMenu(Game, Graphics, Content));
+                this.Reset();
+            }
             
 
             this.Move(gObjects);
@@ -232,6 +235,13 @@ namespace The_Stella_Game.Sprites
 
             base.Draw(gameTime, spriteBatch);
         }
+
+        public void Reset()
+        {
+            this.KeyQuantity = 0;
+            this.Health = 3;
+        }
+
         public override string ToString()
         {
             return "StellaPlayer";

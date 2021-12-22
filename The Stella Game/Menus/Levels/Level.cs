@@ -13,7 +13,7 @@ namespace The_Stella_Game.Menus.Levels
     {
         public ContentManager Content { get; private set; }
         public GraphicsDeviceManager Graphics { get; private set; }
-        public List<IGObject> SpriteObjects { get; private set; }
+        public List<IGObject> SpriteObjects { get; set; }
         public Game1 Game { get; private set; }
 
         public bool Played = false;
@@ -27,6 +27,8 @@ namespace The_Stella_Game.Menus.Levels
             this.Content = content;
 
             SpriteObjects = new List<IGObject>();
+
+            this.Load();
         }
 
         public virtual void Update(GameTime gameTime)
@@ -46,6 +48,7 @@ namespace The_Stella_Game.Menus.Levels
             }
         }
 
+        public abstract void Load();
         public abstract void PlaySong();
     }
 }
