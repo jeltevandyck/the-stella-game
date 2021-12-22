@@ -1,8 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 using The_Stella_Game.Framework;
 using The_Stella_Game.Menus;
+using The_Stella_Game.Menus.Levels;
 
 namespace The_Stella_Game
 {
@@ -15,7 +17,7 @@ namespace The_Stella_Game
         private SpriteBatch _spriteBatch;
 
         private Menu menu;
-
+        public List<Level> Levels;
 
         private static Game1 instance;
 
@@ -26,6 +28,8 @@ namespace The_Stella_Game
             _graphics.PreferredBackBufferHeight = MAX_HEIGHT;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+
+            Levels = new List<Level>();
 
             instance = this;
         }
@@ -40,17 +44,58 @@ namespace The_Stella_Game
             return _graphics;
         }
 
+        public Level GetLastPlayedLevel()
+        {
+            Level lastplayed = null;
+            foreach (Level level in Levels)
+            {
+                if (!level.Played)
+                {
+                    lastplayed = level;
+                    break;
+                }
+            }
+            return lastplayed;
+        }
+
+        public void ResetAllLevels()
+        {
+            foreach(Level level in Levels) { level.Played = false; }
+        }
+
+        public void ChangeLevel()
+        {
+            if (!(menu is GameMenu)) return;
+
+            GameMenu gameMenu = menu as GameMenu;
+            gameMenu.CurrentLevel.Played = true;
+
+            Level level = this.GetLastPlayedLevel();
+
+            if (level == null)
+            {
+                this.ResetAllLevels();
+                this.ChangeMenu(new GameOverMenu(this, _graphics, Content));
+            }
+            else gameMenu.CurrentLevel = level;
+        }
+
         public void ChangeMenu(Menu menu)
         {
             this.menu = menu;
         }
 
-       
-
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            Levels.Add(new Level1(this, Content));
+            Levels.Add(new Level2(this, Content));
+
             menu = new StartMenu(this, _graphics, Content);
+
+            //GameMenu gameMenu = new GameMenu(this, _graphics, Content);
+            //gameMenu.CurrentLevel = Levels[1];
+            //this.menu = gameMenu;
 
             base.Initialize();
         }

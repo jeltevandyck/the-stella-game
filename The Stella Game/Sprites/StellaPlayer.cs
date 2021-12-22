@@ -126,9 +126,7 @@ namespace The_Stella_Game.Sprites
                 {
                     this.KeyQuantity = 0;
 
-                    
-                    this.Game.ChangeMenu(new Level2(Game, Graphics, Content));
-                    
+                    Game1.GetInstance().ChangeLevel();
                 }
             }
 

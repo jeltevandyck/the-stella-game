@@ -1,33 +1,27 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Content;
 using The_Stella_Game.Framework;
 
-namespace The_Stella_Game.Framework
+namespace The_Stella_Game.Menus.Levels
 {
-    public abstract class Menu
+    public class Level
     {
-        public int MaxWidth = 1700;
-        public int MaxHeight = 900;
-
-        public bool IsMouseVisible { get; set; }
         public ContentManager Content { get; private set; }
         public GraphicsDeviceManager Graphics { get; private set; }
         public List<IGObject> SpriteObjects { get; private set; }
         public Game1 Game { get; private set; }
 
-        public Texture2D Background;
+        public bool Played = false;
 
-        
-        public Menu(Game1 game, GraphicsDeviceManager graphics, ContentManager content)
+        public Texture2D Background;
+        public Level(Game1 game, ContentManager content)
         {
             this.Game = game;
-            this.Graphics = graphics;
-            Content = content;
+            this.Content = content;
 
             SpriteObjects = new List<IGObject>();
         }
@@ -41,7 +35,8 @@ namespace The_Stella_Game.Framework
         }
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(Background, new Rectangle(0, 0, MaxWidth, MaxHeight), Color.White);
+            spriteBatch.Draw(Background, new Rectangle(0, 0, Game1.MAX_WIDTH, Game1.MAX_HEIGHT), Color.White);
+
             foreach (IGObject obj in SpriteObjects)
             {
                 obj.Draw(gameTime, spriteBatch);

@@ -1,29 +1,30 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using The_Stella_Game.Framework;
 using The_Stella_Game.Sprites;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Input;
+using The_Stella_Game.Framework;
 using The_Stella_Game.Sprites.Bars;
+using The_Stella_Game.Menus.Levels;
 
-namespace The_Stella_Game.Menus
+namespace The_Stella_Game.Menus.Levels
 {
-    class Level2 : Menu
+    public class Level2 : Level
     {
-        public Level2(Game1 game, GraphicsDeviceManager graphics, ContentManager content) : base(game, graphics, content)
+        public Level2(Game1 game, ContentManager content) : base(game, content)
         {
             this.Background = content.Load<Texture2D>("Sprites\\Menu\\BackgroundLevel2");
 
             //Player
-            SpriteObjects.Add(new StellaPlayer(game,Content, new Vector2(750, 200)));
+            SpriteObjects.Add(new StellaPlayer(game, content, new Vector2(750, 200)));
 
             #region Minibosses
 
             SpriteObjects.Add(new MiniBoss(content, "SpriteSheetMaesSideways", new Vector2(1000, 475), 300));
-            SpriteObjects.Add(new MiniBoss(content, "SpriteSheetHeinekenSideways", new Vector2(1400,475),200));
+            SpriteObjects.Add(new MiniBoss(content, "SpriteSheetHeinekenSideways", new Vector2(1400, 475), 200));
 
             SpriteObjects.Add(new MiniBoss(content, "SpriteSheetCristalSideways", new Vector2(200, 800), 200));
             SpriteObjects.Add(new MiniBoss(content, "SpriteSheetHeinekenSideways", new Vector2(450, 800), 300));
@@ -38,11 +39,13 @@ namespace The_Stella_Game.Menus
 
             #region Door
 
+            SpriteObjects.Add(new Door(content, new Vector2(1620, 700)));
+
             #endregion
 
             #region Coins
 
-            SpriteObjects.Add(new Coin(content, new Vector2(300,170)));
+            SpriteObjects.Add(new Coin(content, new Vector2(300, 170)));
             SpriteObjects.Add(new Coin(content, new Vector2(520, 270)));
 
             SpriteObjects.Add(new Coin(content, new Vector2(980, 290)));
@@ -70,31 +73,31 @@ namespace The_Stella_Game.Menus
 
             #region Platforms
             //Horitontal
-            SpriteObjects.Add(new Platform(Content, "H3", new Vector2(660, 400)));
-            SpriteObjects.Add(new Platform(Content, "H3", new Vector2(962, 322)));
-            SpriteObjects.Add(new Platform(Content, "H2", new Vector2(0, 528)));
-            SpriteObjects.Add(new Platform(Content, "H3", new Vector2(360, 529)));
+            SpriteObjects.Add(new Platform(content, "H3", new Vector2(660, 400)));
+            SpriteObjects.Add(new Platform(content, "H3", new Vector2(962, 322)));
+            SpriteObjects.Add(new Platform(content, "H2", new Vector2(0, 528)));
+            SpriteObjects.Add(new Platform(content, "H3", new Vector2(360, 529)));
 
-            SpriteObjects.Add(new Platform(Content, "H1", new Vector2(915, 528)));
-            SpriteObjects.Add(new Platform(Content, "H2", new Vector2(1373, 530)));
+            SpriteObjects.Add(new Platform(content, "H1", new Vector2(915, 528)));
+            SpriteObjects.Add(new Platform(content, "H2", new Vector2(1373, 530)));
 
-            SpriteObjects.Add(new Platform(Content, "H1", new Vector2(0, 853)));
-            SpriteObjects.Add(new Platform(Content, "H1", new Vector2(458, 853)));
-            SpriteObjects.Add(new Platform(Content, "H3", new Vector2(915, 856)));
+            SpriteObjects.Add(new Platform(content, "H1", new Vector2(0, 853)));
+            SpriteObjects.Add(new Platform(content, "H1", new Vector2(458, 853)));
+            SpriteObjects.Add(new Platform(content, "H3", new Vector2(915, 856)));
 
-            SpriteObjects.Add(new Platform(Content, "H4", new Vector2(2, 100)));
-            SpriteObjects.Add(new Platform(Content, "H4", new Vector2(222, 200)));
-            SpriteObjects.Add(new Platform(Content, "H4", new Vector2(452, 300)));
+            SpriteObjects.Add(new Platform(content, "H4", new Vector2(2, 100)));
+            SpriteObjects.Add(new Platform(content, "H4", new Vector2(222, 200)));
+            SpriteObjects.Add(new Platform(content, "H4", new Vector2(452, 300)));
 
-            SpriteObjects.Add(new Platform(Content, "H3", new Vector2(1380, 250)));
+            SpriteObjects.Add(new Platform(content, "H3", new Vector2(1380, 250)));
 
-            SpriteObjects.Add(new Platform(Content, "H4", new Vector2(1220, 778)));
-            SpriteObjects.Add(new Platform(Content, "H4", new Vector2(1530, 778)));
+            SpriteObjects.Add(new Platform(content, "H4", new Vector2(1220, 778)));
+            SpriteObjects.Add(new Platform(content, "H4", new Vector2(1530, 778)));
 
             //Vertical
-            SpriteObjects.Add(new Platform(Content, "V3", new Vector2(624, 300)));
-            SpriteObjects.Add(new Platform(Content, "V5", new Vector2(923, 322)));
-            SpriteObjects.Add(new Platform(Content, "V5", new Vector2(1180, 780)));
+            SpriteObjects.Add(new Platform(content, "V3", new Vector2(624, 300)));
+            SpriteObjects.Add(new Platform(content, "V5", new Vector2(923, 322)));
+            SpriteObjects.Add(new Platform(content, "V5", new Vector2(1180, 780)));
 
             #endregion
 
@@ -118,13 +121,6 @@ namespace The_Stella_Game.Menus
 
 
             #endregion
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-            if (Keyboard.GetState().IsKeyDown(Keys.Tab)) Game.ChangeMenu(new StartMenu(Game, Graphics, Content));
-
-            base.Update(gameTime);
         }
     }
 }
