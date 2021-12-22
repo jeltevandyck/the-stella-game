@@ -21,8 +21,6 @@ namespace The_Stella_Game.Framework
         public Game1 Game { get; private set; }
 
         public Texture2D Background;
-
-        
         public Menu(Game1 game, GraphicsDeviceManager graphics, ContentManager content)
         {
             this.Game = game;

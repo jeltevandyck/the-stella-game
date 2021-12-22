@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using System.Collections.Generic;
 using The_Stella_Game.Framework;
 using The_Stella_Game.Menus;
@@ -63,6 +64,14 @@ namespace The_Stella_Game
             foreach(Level level in Levels) { level.Played = false; }
         }
 
+        public void ResetLastLevel()
+        {
+            Level level = this.GetLastPlayedLevel();
+
+            if (level == null) return;
+            else level.Load();
+        }
+
         public void ChangeLevel()
         {
             if (!(menu is GameMenu)) return;
@@ -75,9 +84,14 @@ namespace The_Stella_Game
             if (level == null)
             {
                 this.ResetAllLevels();
-                this.ChangeMenu(new GameOverMenu(this, _graphics, Content));
+                this.ChangeMenu(new VictoryMenu(this, _graphics, Content));
             }
-            else gameMenu.CurrentLevel = level;
+            else
+            {
+                gameMenu.CurrentLevel = level;
+                gameMenu.CurrentLevel.Load();
+                gameMenu.CurrentLevel.PlaySong();
+            }
         }
 
         public void ChangeMenu(Menu menu)
@@ -97,6 +111,8 @@ namespace The_Stella_Game
             //gameMenu.CurrentLevel = Levels[1];
             //this.menu = gameMenu;
 
+            //MediaPlayer.Stop();
+
             base.Initialize();
         }
 
@@ -109,9 +125,6 @@ namespace The_Stella_Game
 
         protected override void Update(GameTime gameTime)
         {
-            //if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-            //    Exit();
-
             // TODO: Add your update logic here
             menu.Update(gameTime);
 

@@ -76,7 +76,6 @@ C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021
 C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-arm\native\libuv.dll
 C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\libuv.dll
 C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\libuv.dll
-C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.csproj.AssemblyReference.cache
 C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.AssemblyInfoInputs.cache
 C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.AssemblyInfo.cs
@@ -213,8 +212,33 @@ C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Menu\BackgroundLevel2.xnb
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaGlassSideways.xnb
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaHalfFullGlassGlassSideways.xnb
-C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.csproj.AssemblyReference.cache
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Button\RestartButton.xnb
 C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Button\RestartButton.xnb
 C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Fonts\ScoreFont.xnb
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Fonts\ScoreFont.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\Level1BackgroundMusic.wma
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\Level1BackgroundMusic.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\Level2BackgroundMusic.wma
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\Level2BackgroundMusic.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\SoundEffect\Coin.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\SoundEffect\Damage.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\SoundEffect\StellaDamage.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Button\HomeButton.xnb
+C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Menu\YouWonScherm.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Fonts\ScoreFont.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\Level1BackgroundMusic.wma
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\Level1BackgroundMusic.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\Level2BackgroundMusic.wma
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\Level2BackgroundMusic.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\SoundEffect\Coin.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\SoundEffect\Damage.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Music\SoundEffect\StellaDamage.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Button\HomeButton.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Button\Quitbutton2.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Button\RestartButton.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Door\Door.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Menu\BackgroundLevel2.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Menu\YouWonScherm.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaGlassSideways.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaHalfFullGlassGlassSideways.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.csproj.AssemblyReference.cache

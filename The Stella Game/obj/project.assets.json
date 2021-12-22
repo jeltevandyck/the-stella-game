@@ -7373,25 +7373,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jelte\\.nuget\\packages\\": {},
+    "C:\\Users\\jelte\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jelte\\Documents\\Projects\\AP\\2021 - 2022\\The Stella Game\\The Stella Game\\The Stella Game\\The Stella Game.csproj",
+      "projectUniqueName": "C:\\Users\\jelte\\OneDrive\\Documenten\\Projects\\AP\\2021 - 2022\\Game Development 2021\\The Stella Game\\The Stella Game\\The Stella Game.csproj",
       "projectName": "The Stella Game",
-      "projectPath": "C:\\Users\\Jelte\\Documents\\Projects\\AP\\2021 - 2022\\The Stella Game\\The Stella Game\\The Stella Game\\The Stella Game.csproj",
-      "packagesPath": "C:\\Users\\Jelte\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jelte\\Documents\\Projects\\AP\\2021 - 2022\\The Stella Game\\The Stella Game\\The Stella Game\\obj\\",
+      "projectPath": "C:\\Users\\jelte\\OneDrive\\Documenten\\Projects\\AP\\2021 - 2022\\Game Development 2021\\The Stella Game\\The Stella Game\\The Stella Game.csproj",
+      "packagesPath": "C:\\Users\\jelte\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jelte\\OneDrive\\Documenten\\Projects\\AP\\2021 - 2022\\Game Development 2021\\The Stella Game\\The Stella Game\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Jelte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jelte\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -7446,7 +7448,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }
