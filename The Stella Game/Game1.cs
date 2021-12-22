@@ -75,9 +75,13 @@ namespace The_Stella_Game
             if (level == null)
             {
                 this.ResetAllLevels();
-                this.ChangeMenu(new GameOverMenu(this, _graphics, Content));
+                this.ChangeMenu(new VictoryMenu(this, _graphics, Content));
             }
-            else gameMenu.CurrentLevel = level;
+            else
+            {
+                gameMenu.CurrentLevel = level;
+                gameMenu.CurrentLevel.PlaySong();
+            }
         }
 
         public void ChangeMenu(Menu menu)
@@ -91,7 +95,7 @@ namespace The_Stella_Game
             Levels.Add(new Level1(this, Content));
             Levels.Add(new Level2(this, Content));
 
-            menu = new StartMenu(this, _graphics, Content);
+            menu = new VictoryMenu(this, _graphics, Content);
 
             //GameMenu gameMenu = new GameMenu(this, _graphics, Content);
             //gameMenu.CurrentLevel = Levels[1];

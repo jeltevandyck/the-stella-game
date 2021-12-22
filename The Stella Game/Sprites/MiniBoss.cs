@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -19,6 +20,8 @@ namespace The_Stella_Game.Sprites
         public bool Found;
         public double Value = 150;
 
+        public SoundEffect MiniBossSound;
+
         public MiniBoss(ContentManager content, string sheet, Vector2 spawnPosition) : this(content, sheet, spawnPosition, 100)
         {
         }
@@ -28,6 +31,8 @@ namespace The_Stella_Game.Sprites
             this.Texture = content.Load<Texture2D>("Sprites\\Miniboss\\" + sheet);
             this.CollisionBox = new CollisionBox(spawnPosition, 25, 60, 20, 0, true);
             this.WalkRange = walkrange;
+
+            MiniBossSound = content.Load<SoundEffect>("Music\\SoundEffect\\Damage");
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 100), 5));
             this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 100), 5));

@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Input;
 using The_Stella_Game.Framework;
 using System.Diagnostics;
 using The_Stella_Game.Menus;
+using Microsoft.Xna.Framework.Audio;
 
 namespace The_Stella_Game.Sprites
 {
@@ -25,12 +26,15 @@ namespace The_Stella_Game.Sprites
         private Cooldown SpikeCooldown;
         private Cooldown MiniBossCooldown;
 
+        public SoundEffect StellaDamageSound;
 
         public StellaPlayer(Game1 game, ContentManager contentManager, Vector2 spawnPosition) : base(contentManager, spawnPosition)
         {
             this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaEmptyGlassSideways");
             this.Game = game;
             this.CollisionBox = new CollisionBox(spawnPosition, 25, 47, 20, 0, true);
+
+            StellaDamageSound = contentManager.Load<SoundEffect>("Music\\SoundEffect\\StellaDamage");
 
             this.Add(new AnimationFrame(new Rectangle(0, 0, 100, 99), 5));
             this.Add(new AnimationFrame(new Rectangle(100, 0, 100, 99), 5));
@@ -99,6 +103,7 @@ namespace The_Stella_Game.Sprites
 
                 if (!coin.Found)
                 {
+                    coin.CoinSound.Play();
                     this.Score += coin.Value;
                     coin.Found = true;
 
@@ -138,6 +143,7 @@ namespace The_Stella_Game.Sprites
 
                     if (!SpikeCooldown.Enabled)
                     {
+                        StellaDamageSound.Play();
                         this.Health -= 1;
                         SpikeCooldown.Enabled = true;
                     }
@@ -155,12 +161,14 @@ namespace The_Stella_Game.Sprites
                 {
                     if (this.IsTouchingTop(miniBoss))
                     {
+                        miniBoss.MiniBossSound.Play();
                         this.Score += miniBoss.Value;
                         miniBoss.Lives -= 1;
                         miniBoss.Found = true;
                     }
                     else
                     {
+                        StellaDamageSound.Play();
                         this.Health -= 1;
                         MiniBossCooldown.Enabled = true;
                     }

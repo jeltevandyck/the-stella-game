@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +9,7 @@ using The_Stella_Game.Framework;
 
 namespace The_Stella_Game.Menus.Levels
 {
-    public class Level
+    public abstract class Level
     {
         public ContentManager Content { get; private set; }
         public GraphicsDeviceManager Graphics { get; private set; }
@@ -18,6 +19,8 @@ namespace The_Stella_Game.Menus.Levels
         public bool Played = false;
 
         public Texture2D Background;
+
+        public Song BackgroundSong;
         public Level(Game1 game, ContentManager content)
         {
             this.Game = game;
@@ -42,5 +45,7 @@ namespace The_Stella_Game.Menus.Levels
                 obj.Draw(gameTime, spriteBatch);
             }
         }
+
+        public abstract void PlaySong();
     }
 }
