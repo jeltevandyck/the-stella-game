@@ -8,7 +8,7 @@ namespace The_Stella_Game.Framework
     public class Cooldown
     {
         public bool Enabled = false;
-        public float Delay = 1f;
+        public float Delay = 5f;
 
         public Cooldown(float delay)
         {
@@ -17,10 +17,16 @@ namespace The_Stella_Game.Framework
 
         public void Update(GameTime gameTime)
         {
-            if (!Enabled) return;
-            Delay -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (Enabled)
+            {
+                Delay -= (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            if (Delay < 0) Enabled = false;
+                if (Delay <= 0f)
+                {
+                    Enabled = false;
+                    Delay = 5f;
+                }
+            }
         }
     }
 }

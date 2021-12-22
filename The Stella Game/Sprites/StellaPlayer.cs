@@ -22,7 +22,9 @@ namespace The_Stella_Game.Sprites
 
         private Game1 Game;
 
-        private Cooldown damageCooldown;
+        private Cooldown SpikeCooldown;
+        private Cooldown MiniBossCooldown;
+
 
         public StellaPlayer(Game1 game, ContentManager contentManager, Vector2 spawnPosition) : base(contentManager, spawnPosition)
         {
@@ -35,7 +37,8 @@ namespace The_Stella_Game.Sprites
             this.Add(new AnimationFrame(new Rectangle(200, 0, 100, 99), 5));
             this.Add(new AnimationFrame(new Rectangle(300, 0, 100, 99), 5));
 
-            damageCooldown = new Cooldown(2f);
+            SpikeCooldown = new Cooldown(2f);
+            MiniBossCooldown = new Cooldown(2f);
         }
 
         public override void Move(List<IGObject> gObjects)
@@ -51,6 +54,7 @@ namespace The_Stella_Game.Sprites
                 {
                     this.Intersects(sprite);
 
+
                     Velocity.Y = 0f;
 
                     if (this.IsTouchingLeft(sprite) && Velocity.X > 0) Velocity.X = 0f;
@@ -58,6 +62,7 @@ namespace The_Stella_Game.Sprites
 
                     IsFalling = false;
                     break;
+
                 }
                 else
                 {
@@ -120,6 +125,8 @@ namespace The_Stella_Game.Sprites
                 if (this.KeyQuantity == 3)
                 {
                     this.KeyQuantity = 0;
+
+                    
                     this.Game.ChangeMenu(new Level2(Game, Graphics, Content));
                     
                 }
@@ -128,10 +135,14 @@ namespace The_Stella_Game.Sprites
             if (sprite is Spike)
             {
                 Spike s = sprite as Spike;
-                if (s.State == SpikeState.UP)
+                if (s.State == SpikeState.UP )
                 {
-                    if (!damageCooldown.Enabled) this.Health -= 1;
-                    damageCooldown.Enabled = true;
+
+                    if (!SpikeCooldown.Enabled)
+                    {
+                        this.Health -= 1;
+                        SpikeCooldown.Enabled = true;
+                    }
                 }
                 else
                 {
@@ -142,13 +153,29 @@ namespace The_Stella_Game.Sprites
             if (sprite is MiniBoss)
             {
                 MiniBoss miniBoss = sprite as MiniBoss;
+                if (!MiniBossCooldown.Enabled)
+                {
+                    if (this.IsTouchingTop(miniBoss))
+                    {
+                        this.Score += miniBoss.Value;
+                        miniBoss.Lives -= 1;
+                        miniBoss.Found = true;
+                    }
+                    else
+                    {
+                        this.Health -= 1;
+                        MiniBossCooldown.Enabled = true;
+                    }
+                    
+                }
+
                 
-                this.Health -= 1;
             }
         }
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
-            damageCooldown.Update(gameTime);
+            MiniBossCooldown.Update(gameTime);
+            SpikeCooldown.Update(gameTime);
 
             KeyboardState state = Keyboard.GetState();
 
@@ -169,7 +196,9 @@ namespace The_Stella_Game.Sprites
             }
 
             if (this.Health == 0) Game.ChangeMenu(new GameOverMenu(Game, Graphics, Content));
+
             
+
             this.Move(gObjects);
 
             base.Update(gameTime, gObjects);
@@ -193,6 +222,8 @@ namespace The_Stella_Game.Sprites
             {
                 this.Texture = Content.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaGlassSideways");
             }
+
+
             base.Draw(gameTime, spriteBatch);
         }
         public override string ToString()

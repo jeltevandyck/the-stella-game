@@ -215,3 +215,5 @@ C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Player\SpriteSheetStellaHalfFullGlassGlassSideways.xnb
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\obj\Debug\netcoreapp3.1\The Stella Game.csproj.AssemblyReference.cache
 C:\Users\Jelte\Documents\Projects\AP\2021 - 2022\The Stella Game\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Button\RestartButton.xnb
+C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Button\RestartButton.xnb
+C:\Users\sonia\Documents\TheStellaGameV3\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Fonts\ScoreFont.xnb

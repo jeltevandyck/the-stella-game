@@ -16,6 +16,7 @@ namespace The_Stella_Game
 
         private Menu menu;
 
+
         private static Game1 instance;
 
         public Game1()
@@ -43,6 +44,8 @@ namespace The_Stella_Game
         {
             this.menu = menu;
         }
+
+       
 
         protected override void Initialize()
         {

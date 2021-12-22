@@ -10,11 +10,14 @@ namespace The_Stella_Game.Sprites
 {
     public class MiniBoss : AnimationEntity
     {
-        public int Lives { get; private set; } = 1;
+        public int Lives { get;  set; } = 1;
 
         public int WalkRange = 100;
 
         private Boolean _backToSpawn = false;
+
+        public bool Found;
+        public double Value = 150;
 
         public MiniBoss(ContentManager content, string sheet, Vector2 spawnPosition) : this(content, sheet, spawnPosition, 100)
         {
@@ -55,6 +58,18 @@ namespace The_Stella_Game.Sprites
             this.Move(gObjects);
 
             base.Update(gameTime, gObjects);
+        }
+
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            if (!Found)
+            {
+                base.Draw(gameTime, spriteBatch);
+            }
+            else
+            {
+                CollisionBox.Box = Rectangle.Empty;
+            }
         }
 
         public override string ToString()
