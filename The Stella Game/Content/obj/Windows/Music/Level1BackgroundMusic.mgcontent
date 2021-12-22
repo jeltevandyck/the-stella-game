@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/Music/Level1BackgroundMusic.mp3</SourceFile>
+  <SourceTime>2021-12-22T14:03:03.6620898+01:00</SourceTime>
+  <DestFile>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/bin/Windows/Music/Level1BackgroundMusic.xnb</DestFile>
+  <DestTime>2021-12-22T14:04:49.926217+01:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2020-08-10T18:17:54+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/sonia/Documents/TheStellaGameV3/the-stella-game/The Stella Game/Content/bin/Windows/Music/Level1BackgroundMusic.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>

@@ -8,20 +8,26 @@ using The_Stella_Game.Sprites;
 using Microsoft.Xna.Framework.Input;
 using The_Stella_Game.Framework;
 using The_Stella_Game.Sprites.Bars;
+using Microsoft.Xna.Framework.Media;
+using System.Diagnostics;
 
 namespace The_Stella_Game.Menus
 {
     public class GameMenu : Menu
     {
         
-        StellaPlayer stella;
         public GameMenu(Game1 game, GraphicsDeviceManager graphics, ContentManager content) : base(game, graphics, content)
         {
             this.Background = content.Load<Texture2D>("Sprites\\Menu\\BackgroundLevel1");
 
+            this.BackgroundSong = content.Load<Song>("Music\\Level1BackgroundMusic");
+            MediaPlayer.Volume -= 0.7f;
+            MediaPlayer.Play(BackgroundSong);
+            MediaPlayer.MediaStateChanged += ChangeState_Media;
+
             //Player
 
-            stella = new StellaPlayer(game, Content, new Vector2(10, 50));
+            StellaPlayer stella = new StellaPlayer(game, Content, new Vector2(10, 50));
             SpriteObjects.Add(stella);
 
             #region Minibosses
@@ -150,6 +156,11 @@ namespace The_Stella_Game.Menus
 
             #endregion 
 
+        }
+
+        private void ChangeState_Media(object sender, EventArgs e)
+        {
+            MediaPlayer.Play(BackgroundSong);
         }
 
         public override void Update(GameTime gameTime)

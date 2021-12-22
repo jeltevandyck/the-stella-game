@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 using The_Stella_Game.Framework;
+using Microsoft.Xna.Framework.Media;
 
 namespace The_Stella_Game.Framework
 {
@@ -22,7 +23,8 @@ namespace The_Stella_Game.Framework
 
         public Texture2D Background;
 
-        
+        public Song BackgroundSong;
+
         public Menu(Game1 game, GraphicsDeviceManager graphics, ContentManager content)
         {
             this.Game = game;
@@ -42,6 +44,7 @@ namespace The_Stella_Game.Framework
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(Background, new Rectangle(0, 0, MaxWidth, MaxHeight), Color.White);
+
 
             foreach (IGObject obj in SpriteObjects)
             {

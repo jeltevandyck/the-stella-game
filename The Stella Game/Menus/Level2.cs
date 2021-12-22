@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,6 +17,11 @@ namespace The_Stella_Game.Menus
         public Level2(Game1 game, GraphicsDeviceManager graphics, ContentManager content) : base(game, graphics, content)
         {
             this.Background = content.Load<Texture2D>("Sprites\\Menu\\BackgroundLevel2");
+
+            this.BackgroundSong = content.Load<Song>("Music\\Level2BackgroundMusic");
+            MediaPlayer.Volume -= 0.7f;
+            MediaPlayer.Play(BackgroundSong);
+            MediaPlayer.MediaStateChanged += ChangeState_Media;
 
             //Player
             SpriteObjects.Add(new StellaPlayer(game,Content, new Vector2(750, 200)));
@@ -118,6 +124,11 @@ namespace The_Stella_Game.Menus
 
 
             #endregion
+        }
+
+        private void ChangeState_Media(object sender, EventArgs e)
+        {
+            MediaPlayer.Play(BackgroundSong);
         }
 
         public override void Update(GameTime gameTime)
