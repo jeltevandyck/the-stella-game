@@ -18,7 +18,7 @@ namespace The_Stella_Game.Sprites
         private Boolean _backToSpawn = false;
 
         public bool Found;
-        public double Value = 150;
+        public double Value = 200;
 
         public SoundEffect MiniBossSound;
 

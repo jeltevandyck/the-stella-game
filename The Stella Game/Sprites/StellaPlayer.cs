@@ -16,8 +16,10 @@ namespace The_Stella_Game.Sprites
     public class StellaPlayer : AnimationEntity
     {
         public int Health { get; private set; } = 3;
-        public int KeyQuantity { get; private set; } = 0;
+        public int KeyQuantity { get; private set; } = 3;
         public double Score { get; private set; } = 0;
+
+        public double Coins { get; private set; } = 0;
         public bool Jumped { get; private set; } = false;
         public bool IsFalling { get; private set; } = false;
 
@@ -105,6 +107,7 @@ namespace The_Stella_Game.Sprites
                 {
                     coin.CoinSound.Play();
                     this.Score += coin.Value;
+                    this.Coins += 1;
                     coin.Found = true;
 
                 }

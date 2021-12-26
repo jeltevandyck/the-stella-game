@@ -59,6 +59,8 @@ namespace The_Stella_Game
             return lastplayed;
         }
 
+        
+
         public void ResetAllLevels()
         {
             foreach(Level level in Levels) { level.Played = false; }
@@ -102,8 +104,12 @@ namespace The_Stella_Game
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+
+            
             Levels.Add(new Level1(this, Content));
             Levels.Add(new Level2(this, Content));
+            Levels.Add(new EndLevel(this, Content));
+
 
             menu = new StartMenu(this, _graphics, Content);
 

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using The_Stella_Game.Framework;
+using The_Stella_Game.Sprites.Bars;
 
 namespace The_Stella_Game.Menus.Levels
 {
@@ -27,7 +28,7 @@ namespace The_Stella_Game.Menus.Levels
             this.Content = content;
 
             SpriteObjects = new List<IGObject>();
-
+            
             this.Load();
         }
 
@@ -46,8 +47,11 @@ namespace The_Stella_Game.Menus.Levels
             {
                 obj.Draw(gameTime, spriteBatch);
             }
+
+            
         }
 
+        
         public abstract void Load();
         public abstract void PlaySong();
     }

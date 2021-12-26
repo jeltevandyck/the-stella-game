@@ -15,7 +15,7 @@ namespace The_Stella_Game.Framework
         public Vector2 Position;
 
         public Vector2 Velocity;
-
+        
         public CollisionBox CollisionBox;
 
         public float Speed { get; set; } = 2f;
@@ -50,6 +50,7 @@ namespace The_Stella_Game.Framework
         {
             spriteBatch.Draw(Texture, Position, CollisionBox.Box, Color.White);
         }
+
 
         #region Collision
         //Source: https://github.com/Oyyou/MonoGame_Tutorials/blob/master/MonoGame_Tutorials/Tutorial009/Sprites/Sprite.cs
