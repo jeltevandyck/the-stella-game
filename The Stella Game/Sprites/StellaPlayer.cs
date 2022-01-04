@@ -9,6 +9,7 @@ using The_Stella_Game.Framework;
 using System.Diagnostics;
 using The_Stella_Game.Menus;
 using Microsoft.Xna.Framework.Audio;
+using The_Stella_Game.Menus.Levels;
 
 namespace The_Stella_Game.Sprites
 {
@@ -18,6 +19,8 @@ namespace The_Stella_Game.Sprites
         public int Health { get; private set; } = 3;
         public int KeyQuantity { get; private set; } = 0;
         public double Score { get; private set; } = 0;
+
+        public double Coins { get; private set; } = 0;
         public bool Jumped { get; private set; } = false;
         public bool IsFalling { get; private set; } = false;
 
@@ -25,14 +28,21 @@ namespace The_Stella_Game.Sprites
 
         private Cooldown SpikeCooldown;
         private Cooldown MiniBossCooldown;
+        private Cooldown VatCooldown;
+        private Cooldown ShootCooldown;
 
         public SoundEffect StellaDamageSound;
 
-        public StellaPlayer(Game1 game, ContentManager contentManager, Vector2 spawnPosition) : base(contentManager, spawnPosition)
+        private Level _level;
+        private bool hasShot;
+
+        public StellaPlayer(Game1 game, ContentManager contentManager, Vector2 spawnPosition, Level level) : base(contentManager, spawnPosition)
         {
             this.Texture = contentManager.Load<Texture2D>("Sprites\\Player\\SpriteSheetStellaEmptyGlassSideways");
             this.Game = game;
             this.CollisionBox = new CollisionBox(spawnPosition, 25, 47, 20, 0, true);
+
+            this._level = level;
 
             StellaDamageSound = contentManager.Load<SoundEffect>("Music\\SoundEffect\\StellaDamage");
 
@@ -43,6 +53,8 @@ namespace The_Stella_Game.Sprites
 
             SpikeCooldown = new Cooldown(2f);
             MiniBossCooldown = new Cooldown(2f);
+            VatCooldown = new Cooldown(2f);
+            ShootCooldown = new Cooldown(1f);
         }
 
         public override void Move(List<IGObject> gObjects)
@@ -105,6 +117,7 @@ namespace The_Stella_Game.Sprites
                 {
                     coin.CoinSound.Play();
                     this.Score += coin.Value;
+                    this.Coins += 1;
                     coin.Found = true;
 
                 }
@@ -172,16 +185,25 @@ namespace The_Stella_Game.Sprites
                         this.Health -= 1;
                         MiniBossCooldown.Enabled = true;
                     }
-                    
                 }
+            }
 
-                
+            if (sprite is Vat)
+            {
+                if (!VatCooldown.Enabled)
+                {
+                    StellaDamageSound.Play();
+                    this.Health -= 1;
+                    VatCooldown.Enabled = true;
+                }
             }
         }
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
             MiniBossCooldown.Update(gameTime);
             SpikeCooldown.Update(gameTime);
+            VatCooldown.Update(gameTime);
+            ShootCooldown.Update(gameTime);
 
             KeyboardState state = Keyboard.GetState();
 
@@ -196,6 +218,8 @@ namespace The_Stella_Game.Sprites
             else if (state.IsKeyDown(Keys.D)) Velocity.X = Speed; //RIGHT
             else Velocity.X = 0f;
 
+            if (state.IsKeyDown(Keys.E) && !ShootCooldown.Enabled) hasShot = true;
+
             if (state.IsKeyDown(Keys.Space) && !Jumped)
             {
                     Jumped = true;
@@ -207,6 +231,15 @@ namespace The_Stella_Game.Sprites
                 this.Reset();
             }
             
+            if (hasShot && !ShootCooldown.Enabled && (_level is EndLevel))
+            {
+                ShootCooldown.Enabled = true;
+                hasShot = false;
+
+                EndLevel endLevel = _level as EndLevel;
+                endLevel.CachedSprites.Add(new CoinBullet(Content, Position));
+
+            }
 
             this.Move(gObjects);
 

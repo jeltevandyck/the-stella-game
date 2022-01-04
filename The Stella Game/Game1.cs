@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using System.Collections.Generic;
+using System.Diagnostics;
 using The_Stella_Game.Framework;
 using The_Stella_Game.Menus;
 using The_Stella_Game.Menus.Levels;
@@ -59,6 +60,8 @@ namespace The_Stella_Game
             return lastplayed;
         }
 
+        
+
         public void ResetAllLevels()
         {
             foreach(Level level in Levels) { level.Played = false; }
@@ -102,16 +105,20 @@ namespace The_Stella_Game
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+
+            
             Levels.Add(new Level1(this, Content));
             Levels.Add(new Level2(this, Content));
+            Levels.Add(new EndLevel(this, Content));
+
 
             menu = new StartMenu(this, _graphics, Content);
 
-            //GameMenu gameMenu = new GameMenu(this, _graphics, Content);
-            //gameMenu.CurrentLevel = Levels[1];
-            //this.menu = gameMenu;
+            //for (int i = 0; i < 2; i++) { Levels[i].Played = true; }
 
-            //MediaPlayer.Stop();
+            //GameMenu gameMenu = new GameMenu(this, _graphics, Content);
+            //gameMenu.CurrentLevel = Levels[2];
+            //this.menu = gameMenu;
 
             base.Initialize();
         }

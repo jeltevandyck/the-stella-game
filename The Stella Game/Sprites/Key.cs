@@ -20,6 +20,7 @@ namespace The_Stella_Game.Sprites
             this.CollisionBox = new CollisionBox(spawnPosition, 100, 100);
         }
 
+
         public override void Draw(GameTime gameTime, SpriteBatch spritebatch)
         {
             if (!Found)

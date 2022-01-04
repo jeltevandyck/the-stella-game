@@ -21,9 +21,12 @@
     <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Button/StartButton.png</File>
     <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Coin/SpriteSheetCoin.png</File>
     <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Door/Door.png</File>
+    <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/EndBoss/MadBartender.png</File>
+    <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/EndBoss/VatBoss.png</File>
     <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Hearts/Heart.png</File>
     <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Hearts/HeartGrey.png</File>
     <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Key/VatBierPixilated.png</File>
+    <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Menu/BackgroundEndLevel.jpg</File>
     <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Menu/BackgroundLevel1.png</File>
     <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Menu/BackgroundLevel2.jpg</File>
     <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Menu/StellaGameOverScherm.png</File>
@@ -52,6 +55,9 @@
     <File>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Player/SpriteSheetStellaQuarterGlassSideWays.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

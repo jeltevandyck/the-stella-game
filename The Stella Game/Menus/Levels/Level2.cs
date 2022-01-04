@@ -25,7 +25,8 @@ namespace The_Stella_Game.Menus.Levels
             this.Background = Content.Load<Texture2D>("Sprites\\Menu\\BackgroundLevel2");
 
             //Player
-            SpriteObjects.Add(new StellaPlayer(Game, Content, new Vector2(750, 200)));
+            StellaPlayer stella = new StellaPlayer(Game1.GetInstance(), Game1.GetInstance().Content, new Vector2(750, 200), this);
+            SpriteObjects.Add(stella);
 
             #region Minibosses
 
@@ -131,7 +132,7 @@ namespace The_Stella_Game.Menus.Levels
 
         public override void PlaySong()
         {
-            this.BackgroundSong = Content.Load<Song>("Music\\Level2BackgroundMusic");
+            this.BackgroundSong = Content.Load<Song>("Music\\Level1BackgroundMusic");
             MediaPlayer.Volume -= 0.7f;
             MediaPlayer.Play(BackgroundSong);
             MediaPlayer.MediaStateChanged += ChangeState_Media;

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/Sprites/Door/Door.png</SourceFile>
-  <SourceTime>2021-12-15T13:04:27.2843856+01:00</SourceTime>
-  <DestFile>C:/Users/Jelte/Documents/Projects/AP/2021 - 2022/The Stella Game/The Stella Game/The Stella Game/Content/bin/Windows/Sprites/Door/Door.xnb</DestFile>
-  <DestTime>2021-12-22T15:36:44.3072491+01:00</DestTime>
+  <SourceFile>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Door/Door.png</SourceFile>
+  <SourceTime>2021-12-22T21:01:08.9567948+01:00</SourceTime>
+  <DestFile>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/bin/Windows/Sprites/Door/Door.xnb</DestFile>
+  <DestTime>2022-01-04T16:25:36.3074402+01:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2020-08-10T17:17:54+01:00</ImporterTime>
+  <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2020-08-10T17:17:54+01:00</ProcessorTime>
+  <ProcessorTime>2020-08-10T18:17:54+02:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

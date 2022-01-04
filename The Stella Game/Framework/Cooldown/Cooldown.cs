@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace The_Stella_Game.Framework
@@ -10,12 +11,15 @@ namespace The_Stella_Game.Framework
         public bool Enabled = false;
         public float Delay = 5f;
 
+        private float _delayReset;
+
         public Cooldown(float delay)
         {
             Delay = delay;
+            _delayReset = delay;
         }
 
-        public void Update(GameTime gameTime)
+        public virtual void Update(GameTime gameTime)
         {
             if (Enabled)
             {
@@ -24,7 +28,7 @@ namespace The_Stella_Game.Framework
                 if (Delay <= 0f)
                 {
                     Enabled = false;
-                    Delay = 5f;
+                    Delay = _delayReset;
                 }
             }
         }

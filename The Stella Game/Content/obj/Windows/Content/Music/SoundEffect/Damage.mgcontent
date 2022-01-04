@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Music/SoundEffect/Damage.wav</SourceFile>
-  <SourceTime>2021-12-22T21:01:57.5298961+01:00</SourceTime>
+  <SourceTime>2021-12-22T23:28:18.6239351+01:00</SourceTime>
   <DestFile>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/bin/Windows/Content/Music/SoundEffect/Damage.xnb</DestFile>
-  <DestTime>2021-12-22T21:02:24.8513031+01:00</DestTime>
+  <DestTime>2022-01-04T16:14:23.5591716+01:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>
