@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using The_Stella_Game.Framework;
 using The_Stella_Game.Sprites;
@@ -11,11 +12,13 @@ using The_Stella_Game.Sprites.Bars;
 
 namespace The_Stella_Game.Menus.Levels
 {
-    class EndLevel : Level
+    public class EndLevel : Level
     {
+        public List<Sprite> CachedSprites { get; private set; }
 
         public EndLevel(Game1 game, ContentManager content) : base(game, content)
         {
+            this.CachedSprites = new List<Sprite>();
         }
 
         public override void Load()
@@ -24,14 +27,14 @@ namespace The_Stella_Game.Menus.Levels
             this.Background = Content.Load<Texture2D>("Sprites\\Menu\\BackgroundEndLevel");
 
             //Player
-            StellaPlayer stella = new StellaPlayer(Game1.GetInstance(), Game1.GetInstance().Content, new Vector2(10, 760));
+            StellaPlayer stella = new StellaPlayer(Game1.GetInstance(), Game1.GetInstance().Content, new Vector2(10, 760), this);
             SpriteObjects.Add(stella);
 
             #region Endboss
 
-            SpriteObjects.Add(new EndBoss(Game1.GetInstance(), Content, new Vector2(100, 200), 800));
-
-
+            EndBoss endBoss = new EndBoss(Game1.GetInstance(), Content, new Vector2(100, 200), 800, this);
+            endBoss.SetRectangleTexture(Game1.GetInstance().GraphicsDevice, endBoss.Texture);
+            SpriteObjects.Add(endBoss);
 
             #endregion
 
@@ -58,6 +61,17 @@ namespace The_Stella_Game.Menus.Levels
             SpriteObjects.Add(new Platform(Content, "H1", new Vector2(1377, 853)));
 
             #endregion 
+        }
+
+        public override void PreUpdate(GameTime gameTime)
+        {
+            int index = 3;
+            foreach (Sprite sprite in CachedSprites)
+            {
+                if (sprite is CoinBullet) Debug.WriteLine("coinbullet!");
+                SpriteObjects.Insert(index++, sprite);
+            }
+            CachedSprites.Clear();
         }
 
         public override void PlaySong()

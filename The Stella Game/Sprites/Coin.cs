@@ -38,9 +38,6 @@ namespace The_Stella_Game.Sprites
             {
                 CollisionBox.Box = Rectangle.Empty;
             }
-            
-
-
         }
         public override string ToString()
         {

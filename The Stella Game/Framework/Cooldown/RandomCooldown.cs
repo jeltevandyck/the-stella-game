@@ -6,20 +6,18 @@ using System.Text;
 
 namespace The_Stella_Game.Framework
 {
-    public class Cooldown
+    public class RandomCooldown : Cooldown
     {
-        public bool Enabled = false;
-        public float Delay = 5f;
+        private int _min;
+        private int _max;
 
-        private float _delayReset;
-
-        public Cooldown(float delay)
+        public RandomCooldown(float delay, int min, int max) : base(delay)
         {
-            Delay = delay;
-            _delayReset = delay;
+            this._min = min;
+            this._max = max;
         }
 
-        public virtual void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             if (Enabled)
             {
@@ -28,7 +26,7 @@ namespace The_Stella_Game.Framework
                 if (Delay <= 0f)
                 {
                     Enabled = false;
-                    Delay = _delayReset;
+                    Delay = (new Random()).Next(_min, _max);
                 }
             }
         }

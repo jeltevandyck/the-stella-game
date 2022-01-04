@@ -330,3 +330,6 @@ C:\Users\sonia\Documents\TheStellaGame\the-stella-game\The Stella Game\obj\Debug
 C:\Users\sonia\Documents\TheStellaGame\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Menu\BackgroundEndLevel.xnb
 C:\Users\sonia\Documents\TheStellaGame\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\EndBoss\MadBartender.xnb
 C:\Users\sonia\Documents\TheStellaGame\the-stella-game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\EndBoss\VatBoss.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\EndBoss\MadBartender.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\EndBoss\VatBoss.xnb
+C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\bin\Debug\netcoreapp3.1\Content\Sprites\Menu\BackgroundEndLevel.xnb

@@ -4,8 +4,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using The_Stella_Game.Framework;
+using The_Stella_Game.Sprites;
 using The_Stella_Game.Sprites.Bars;
 
 namespace The_Stella_Game.Menus.Levels
@@ -32,8 +34,15 @@ namespace The_Stella_Game.Menus.Levels
             this.Load();
         }
 
+        public virtual void PreUpdate(GameTime gameTime)
+        {
+
+        }
+
         public virtual void Update(GameTime gameTime)
         {
+            this.PreUpdate(gameTime);
+
             foreach (IGObject obj in SpriteObjects)
             {
                 obj.Update(gameTime, SpriteObjects);

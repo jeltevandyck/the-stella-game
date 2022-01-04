@@ -25,7 +25,7 @@ namespace The_Stella_Game.Menus.Levels
             this.Background = Content.Load<Texture2D>("Sprites\\Menu\\BackgroundLevel2");
 
             //Player
-            StellaPlayer stella = new StellaPlayer(Game1.GetInstance(), Game1.GetInstance().Content, new Vector2(750, 200));
+            StellaPlayer stella = new StellaPlayer(Game1.GetInstance(), Game1.GetInstance().Content, new Vector2(750, 200), this);
             SpriteObjects.Add(stella);
 
             #region Minibosses

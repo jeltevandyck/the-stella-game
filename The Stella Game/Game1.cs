@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using System.Collections.Generic;
+using System.Diagnostics;
 using The_Stella_Game.Framework;
 using The_Stella_Game.Menus;
 using The_Stella_Game.Menus.Levels;
@@ -113,11 +114,11 @@ namespace The_Stella_Game
 
             menu = new StartMenu(this, _graphics, Content);
 
-            //GameMenu gameMenu = new GameMenu(this, _graphics, Content);
-            //gameMenu.CurrentLevel = Levels[1];
-            //this.menu = gameMenu;
+            //for (int i = 0; i < 2; i++) { Levels[i].Played = true; }
 
-            //MediaPlayer.Stop();
+            //GameMenu gameMenu = new GameMenu(this, _graphics, Content);
+            //gameMenu.CurrentLevel = Levels[2];
+            //this.menu = gameMenu;
 
             base.Initialize();
         }
