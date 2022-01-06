@@ -10,6 +10,7 @@ using The_Stella_Game.Framework;
 using The_Stella_Game.Sprites.Bars;
 using The_Stella_Game.Menus.Levels;
 using Microsoft.Xna.Framework.Media;
+using System.Diagnostics;
 
 namespace The_Stella_Game.Menus.Levels
 {
@@ -25,23 +26,14 @@ namespace The_Stella_Game.Menus.Levels
             this.Background = Content.Load<Texture2D>("Sprites\\Menu\\BackgroundLevel1");
 
             //Player
-            StellaPlayer stella = new StellaPlayer(Game1.GetInstance(), Game1.GetInstance().Content, new Vector2(10, 50), this);
-            SpriteObjects.Add(stella);
+            StellaPlayer = new StellaPlayer(Game1.GetInstance(), Game1.GetInstance().Content, new Vector2(10, 50), this);
+            SpriteObjects.Add(StellaPlayer);
 
             #region Minibosses
 
-            MiniBoss miniBossMaes = new MiniBoss(Content, "SpriteSheetMaesSideways", new Vector2(300, 75), 400);
-            miniBossMaes.SetRectangleTexture(Game.GraphicsDevice, miniBossMaes.Texture);
-            SpriteObjects.Add(miniBossMaes);
-
-            MiniBoss miniBossHeineken = new MiniBoss(Content, "SpriteSheetHeinekenSideways", new Vector2(600, 330), 400);
-            miniBossHeineken.SetRectangleTexture(Game.GraphicsDevice, miniBossHeineken.Texture);
-            SpriteObjects.Add(miniBossHeineken);
-
-            MiniBoss miniBossCristal = new MiniBoss(Content, "SpriteSheetCristalSideways", new Vector2(1300, 645), 300);
-            miniBossCristal.SetRectangleTexture(Game.GraphicsDevice, miniBossCristal.Texture);
-            SpriteObjects.Add(miniBossCristal);
-
+            SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetMaesSideways", new Vector2(300, 75), 400));
+            SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetHeinekenSideways", new Vector2(600, 330), 400));
+            SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetCristalSideways", new Vector2(1300, 645), 300));
             SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetMaesSideways", new Vector2(100, 799), 250));
             SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetHeinekenSideways", new Vector2(400, 799), 300));
             SpriteObjects.Add(new MiniBoss(Content, "SpriteSheetCristalSideways", new Vector2(700, 799), 200));
@@ -50,8 +42,8 @@ namespace The_Stella_Game.Menus.Levels
 
             #region Score- And HealthBar
 
-            SpriteObjects.Add(new HealthBar(Content, new Vector2(750, 0)));
-            SpriteObjects.Add(new ScoreBar(Content, new Vector2(850, 5)));
+            SpriteObjects.Add(new HealthBar(Content, new Vector2(750, 0), StellaPlayer));
+            SpriteObjects.Add(new ScoreBar(Content, new Vector2(850, 5), StellaPlayer));
 
             #endregion
 

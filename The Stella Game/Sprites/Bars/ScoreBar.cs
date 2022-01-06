@@ -13,32 +13,16 @@ namespace The_Stella_Game.Sprites.Bars
         SpriteFont ScoreFont;
         StellaPlayer player = null;
 
-        public double Score;
-        public ScoreBar(ContentManager content, Vector2 spawnPosition) : base(content, spawnPosition)
+        public ScoreBar(ContentManager content, Vector2 spawnPosition, StellaPlayer player) : base(content, spawnPosition)
         {
             this.ScoreFont = content.Load<SpriteFont>("Fonts\\ScoreFont");
-        }
-
-        public override void Update(GameTime gameTime, List<IGObject> gObjects)
-        {
-
-            foreach (IGObject obj in gObjects)
-            {
-                if (obj is StellaPlayer)
-                {
-                    player = obj as StellaPlayer;
-                    Score = player.Score;
-                    break;
-                }
-            }
-
-            base.Update(gameTime, gObjects);
+            this.player = player;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
 
-            spriteBatch.DrawString(ScoreFont, $"Score: {Score}", this.Position, Color.White);
+            spriteBatch.DrawString(ScoreFont, $"Muntjes: {player.Coins}", this.Position, Color.White);
         }
     }
 }

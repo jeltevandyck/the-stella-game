@@ -24,6 +24,8 @@ namespace The_Stella_Game.Menus.Levels
         public Texture2D Background;
 
         public Song BackgroundSong;
+
+        public StellaPlayer StellaPlayer;
         public Level(Game1 game, ContentManager content)
         {
             this.Game = game;
@@ -60,7 +62,6 @@ namespace The_Stella_Game.Menus.Levels
             
         }
 
-        
         public abstract void Load();
         public abstract void PlaySong();
     }

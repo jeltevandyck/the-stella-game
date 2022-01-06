@@ -18,9 +18,7 @@ namespace The_Stella_Game.Sprites
     {
         public int Health { get; private set; } = 3;
         public int KeyQuantity { get; private set; } = 0;
-        public double Score { get; private set; } = 0;
-
-        public double Coins { get; private set; } = 0;
+        public double Coins { get; set; } = 0;
         public bool Jumped { get; private set; } = false;
         public bool IsFalling { get; private set; } = false;
 
@@ -33,8 +31,10 @@ namespace The_Stella_Game.Sprites
 
         public SoundEffect StellaDamageSound;
 
-        private Level _level;
         private bool hasShot;
+        private CoinBullet _lastShot;
+
+        private Level _currentLevel;
 
         public StellaPlayer(Game1 game, ContentManager contentManager, Vector2 spawnPosition, Level level) : base(contentManager, spawnPosition)
         {
@@ -42,7 +42,7 @@ namespace The_Stella_Game.Sprites
             this.Game = game;
             this.CollisionBox = new CollisionBox(spawnPosition, 25, 47, 20, 0, true);
 
-            this._level = level;
+            this._currentLevel = level;
 
             StellaDamageSound = contentManager.Load<SoundEffect>("Music\\SoundEffect\\StellaDamage");
 
@@ -116,7 +116,6 @@ namespace The_Stella_Game.Sprites
                 if (!coin.Found)
                 {
                     coin.CoinSound.Play();
-                    this.Score += coin.Value;
                     this.Coins += 1;
                     coin.Found = true;
 
@@ -131,7 +130,6 @@ namespace The_Stella_Game.Sprites
                 if (!key.Found)
                 {
                     this.KeyQuantity += 1;
-                    this.Score += key.Value;
                     key.Found = true;
                 }
 
@@ -144,7 +142,7 @@ namespace The_Stella_Game.Sprites
                 {
                     this.KeyQuantity = 0;
 
-                    Game1.GetInstance().ChangeLevel();
+                    Game1.GetInstance().ChangeLevel(Coins);
                 }
             }
 
@@ -175,7 +173,6 @@ namespace The_Stella_Game.Sprites
                     if (this.IsTouchingTop(miniBoss))
                     {
                         miniBoss.MiniBossSound.Play();
-                        this.Score += miniBoss.Value;
                         miniBoss.Lives -= 1;
                         miniBoss.Found = true;
                     }
@@ -231,14 +228,17 @@ namespace The_Stella_Game.Sprites
                 this.Reset();
             }
             
-            if (hasShot && !ShootCooldown.Enabled && (_level is EndLevel))
+            if (hasShot && !ShootCooldown.Enabled && (_currentLevel is EndLevel))
             {
                 ShootCooldown.Enabled = true;
                 hasShot = false;
 
-                EndLevel endLevel = _level as EndLevel;
-                endLevel.CachedSprites.Add(new CoinBullet(Content, Position));
+                EndLevel endLevel = _currentLevel as EndLevel;
+                _lastShot = new CoinBullet(Content, Position, _currentLevel);
+                _lastShot.LastBullet = (Coins == 1);
+                endLevel.CachedSprites.Add(_lastShot);
 
+                Coins -= 1;
             }
 
             this.Move(gObjects);
@@ -273,6 +273,7 @@ namespace The_Stella_Game.Sprites
         {
             this.KeyQuantity = 0;
             this.Health = 3;
+            this.Coins = 0;
         }
 
         public override string ToString()

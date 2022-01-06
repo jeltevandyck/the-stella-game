@@ -21,6 +21,7 @@ namespace The_Stella_Game.Menus
 
         private void restartButton_Click(object sender, EventArgs e)
         {
+            Game.ResetAllLevels();
             Game.ChangeMenu(new StartMenu(Game, Graphics, Content));
         }
     }
