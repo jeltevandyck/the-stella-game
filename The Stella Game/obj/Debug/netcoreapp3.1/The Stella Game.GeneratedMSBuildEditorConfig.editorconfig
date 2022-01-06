@@ -1,3 +1,9 @@
 is_global = true
+build_property.ApplicationManifest = app.manifest
+build_property.StartupObject = 
+build_property.ApplicationDefaultFont = 
+build_property.ApplicationHighDpiMode = 
+build_property.ApplicationUseCompatibleTextRendering = 
+build_property.ApplicationVisualStyles = 
 build_property.RootNamespace = The_Stella_Game
-build_property.ProjectDir = C:\Users\jelte\OneDrive\Documenten\Projects\AP\2021 - 2022\Game Development 2021\The Stella Game\The Stella Game\
+build_property.ProjectDir = C:\Users\sonia\Documents\TheStellaGame\the-stella-game\The Stella Game\

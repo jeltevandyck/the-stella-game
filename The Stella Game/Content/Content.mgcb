@@ -32,6 +32,12 @@
 /processorParam:Quality=Best
 /build:Music/Level2BackgroundMusic.mp3
 
+#begin Music/LevelEndBackgroundMusic.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/LevelEndBackgroundMusic.mp3
+
 #begin Music/SoundEffect/Coin.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
@@ -43,6 +49,12 @@
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:Music/SoundEffect/Damage.wav
+
+#begin Music/SoundEffect/KeySound.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Music/SoundEffect/KeySound.wav
 
 #begin Music/SoundEffect/StellaDamage.wav
 /importer:WavImporter

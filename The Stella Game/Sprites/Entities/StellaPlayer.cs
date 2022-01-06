@@ -129,6 +129,7 @@ namespace The_Stella_Game.Sprites
 
                 if (!key.Found)
                 {
+                    key.KeySound.Play();
                     this.KeyQuantity += 1;
                     key.Found = true;
                 }
@@ -236,6 +237,7 @@ namespace The_Stella_Game.Sprites
                 EndLevel endLevel = _currentLevel as EndLevel;
                 _lastShot = new CoinBullet(Content, Position, _currentLevel);
                 _lastShot.LastBullet = (Coins == 1);
+                _lastShot.CoinBulletSound.Play();
                 endLevel.CachedSprites.Add(_lastShot);
 
                 Coins -= 1;

@@ -68,7 +68,7 @@ namespace The_Stella_Game.Menus.Levels
 
         public override void PlaySong()
         {
-            this.BackgroundSong = Content.Load<Song>("Music\\Level1BackgroundMusic");
+            this.BackgroundSong = Content.Load<Song>("Music\\LevelEndBackgroundMusic");
             MediaPlayer.Volume -= 0.7f;
             MediaPlayer.Play(BackgroundSong);
             MediaPlayer.MediaStateChanged += ChangeState_Media;

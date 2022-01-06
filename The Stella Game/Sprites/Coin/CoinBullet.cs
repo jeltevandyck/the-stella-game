@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -15,11 +16,12 @@ namespace The_Stella_Game.Sprites
 
         public bool LastBullet;
         private Level _currentLevel;
-
+        public SoundEffect CoinBulletSound;
         public CoinBullet(ContentManager content, Vector2 spawnPosition, Level currentLevel) : base(content)
         {
             this.Texture = content.Load<Texture2D>("Sprites\\Coin\\SpriteSheetCoin");
             this.CollisionBox = new CollisionBox(spawnPosition, 40, 40);
+            this.CoinBulletSound = content.Load<SoundEffect>("Music\\SoundEffect\\Coin");
 
             _currentLevel = currentLevel;
             Position = spawnPosition;

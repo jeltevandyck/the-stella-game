@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Sprites/Hearts/HeartGrey.png</SourceFile>
-  <SourceTime>2021-12-02T15:26:57.8806685+01:00</SourceTime>
-  <DestFile>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/bin/Windows/Content/Sprites/Hearts/HeartGrey.xnb</DestFile>
-  <DestTime>2022-01-04T16:14:23.8938949+01:00</DestTime>
+  <SourceFile>C:/Users/sonia/Documents/TheStellaGame/the-stella-game/The Stella Game/Content/Sprites/Hearts/HeartGrey.png</SourceFile>
+  <SourceTime>2021-12-23T12:19:56.4610448+01:00</SourceTime>
+  <DestFile>C:/Users/sonia/Documents/TheStellaGame/the-stella-game/The Stella Game/Content/bin/Windows/Content/Sprites/Hearts/HeartGrey.xnb</DestFile>
+  <DestTime>2022-01-06T23:22:53.7075671+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
