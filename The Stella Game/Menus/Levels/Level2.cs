@@ -10,6 +10,7 @@ using The_Stella_Game.Framework;
 using The_Stella_Game.Sprites.Bars;
 using The_Stella_Game.Menus.Levels;
 using Microsoft.Xna.Framework.Media;
+using System.Diagnostics;
 
 namespace The_Stella_Game.Menus.Levels
 {
@@ -25,8 +26,8 @@ namespace The_Stella_Game.Menus.Levels
             this.Background = Content.Load<Texture2D>("Sprites\\Menu\\BackgroundLevel2");
 
             //Player
-            StellaPlayer stella = new StellaPlayer(Game1.GetInstance(), Game1.GetInstance().Content, new Vector2(750, 200), this);
-            SpriteObjects.Add(stella);
+            StellaPlayer = new StellaPlayer(Game1.GetInstance(), Game1.GetInstance().Content, new Vector2(750, 200), this);
+            SpriteObjects.Add(StellaPlayer);
 
             #region Minibosses
 
@@ -40,8 +41,8 @@ namespace The_Stella_Game.Menus.Levels
             #endregion
 
             #region Score- and Healthbar
-            SpriteObjects.Add(new HealthBar(Content, new Vector2(750, 0)));
-            SpriteObjects.Add(new ScoreBar(Content, new Vector2(850, 5)));
+            SpriteObjects.Add(new HealthBar(Content, new Vector2(750, 0), StellaPlayer));
+            SpriteObjects.Add(new ScoreBar(Content, new Vector2(850, 5), StellaPlayer));
             #endregion
 
             #region Door
@@ -132,7 +133,7 @@ namespace The_Stella_Game.Menus.Levels
 
         public override void PlaySong()
         {
-            this.BackgroundSong = Content.Load<Song>("Music\\Level1BackgroundMusic");
+            this.BackgroundSong = Content.Load<Song>("Music\\Level2BackgroundMusic");
             MediaPlayer.Volume -= 0.7f;
             MediaPlayer.Play(BackgroundSong);
             MediaPlayer.MediaStateChanged += ChangeState_Media;

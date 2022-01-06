@@ -19,13 +19,11 @@ namespace The_Stella_Game.Framework
         public CollisionBox CollisionBox;
 
         public float Speed { get; set; } = 2f;
-
         public Sprite(ContentManager content)
         {
             this.Content = content;
             this.Velocity = new Vector2(0, 0);
         }
-
         public bool DetectCollision(Sprite sprite)
         {
             Rectangle box = CollisionBox.Box;
@@ -34,26 +32,22 @@ namespace The_Stella_Game.Framework
 
             return box.Intersects(sprite.CollisionBox.Box);
         }
-
         public virtual void Intersects(Sprite sprite)
         {
 
         }
-
         public virtual void Update(GameTime gameTime, List<IGObject> gObjects)
         {
             if (CollisionBox == null) return;
             else CollisionBox.Update(Position);
         }
-
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(Texture, Position, CollisionBox.Box, Color.White);
         }
 
-
         #region Collision
-        //Source: https://github.com/Oyyou/MonoGame_Tutorials/blob/master/MonoGame_Tutorials/Tutorial009/Sprites/Sprite.cs
+        //Source - Github Oyyou: https://github.com/Oyyou/MonoGame_Tutorials/blob/master/MonoGame_Tutorials/
         public bool IsTouchingLeft(Sprite sprite)
         {
             return this.CollisionBox.Box.Right + this.Speed > sprite.CollisionBox.Box.Left &&

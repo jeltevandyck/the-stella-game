@@ -5,19 +5,23 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using The_Stella_Game.Framework;
+using The_Stella_Game.Menus;
+using The_Stella_Game.Menus.Levels;
 
 namespace The_Stella_Game.Sprites
 {
     public class CoinBullet : SpriteAnimation
     {
 
-        private bool _hit = false; 
+        public bool LastBullet;
+        private Level _currentLevel;
 
-        public CoinBullet(ContentManager content, Vector2 spawnPosition) : base(content)
+        public CoinBullet(ContentManager content, Vector2 spawnPosition, Level currentLevel) : base(content)
         {
             this.Texture = content.Load<Texture2D>("Sprites\\Coin\\SpriteSheetCoin");
             this.CollisionBox = new CollisionBox(spawnPosition, 40, 40);
 
+            _currentLevel = currentLevel;
             Position = spawnPosition;
 
             Speed = 5f;
@@ -49,16 +53,25 @@ namespace The_Stella_Game.Sprites
         {
             if (sprite is EndBoss)
             {
-                Game1.GetInstance().ChangeLevel();
+                Game1.GetInstance().ChangeLevel(_currentLevel.StellaPlayer.Coins);
             }
         }
 
         public override void Update(GameTime gameTime, List<IGObject> gObjects)
         {
             this.Move(gObjects);
+            
+            if (LastBullet && _currentLevel.StellaPlayer.Coins == 0 && Position.Y <= 200)
+            {
+                Game1.GetInstance().ChangeMenu(new GameOverMenu(Game1.GetInstance(), Game1.GetInstance().GetGraphicsDeviceManager(), Game1.GetInstance().Content));
+            } 
 
             base.Update(gameTime, gObjects);
         }
 
+        public static implicit operator CoinBullet(bool v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
