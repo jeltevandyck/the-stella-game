@@ -3,7 +3,7 @@
   <SourceFile>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/Music/SoundEffect/StellaDamage.wav</SourceFile>
   <SourceTime>2021-12-22T23:28:18.6249357+01:00</SourceTime>
   <DestFile>C:/Users/jelte/OneDrive/Documenten/Projects/AP/2021 - 2022/Game Development 2021/The Stella Game/The Stella Game/Content/bin/Windows/Music/SoundEffect/StellaDamage.xnb</DestFile>
-  <DestTime>2022-01-04T16:25:36.1232726+01:00</DestTime>
+  <DestTime>2022-01-06T20:48:16.1689711+01:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

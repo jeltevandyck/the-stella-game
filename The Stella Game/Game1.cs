@@ -40,12 +40,12 @@ namespace The_Stella_Game
         {
             return instance;
         }
-
         public GraphicsDeviceManager GetGraphicsDeviceManager()
         {
             return _graphics;
         }
 
+        #region Levels
         public Level GetLastPlayedLevel()
         {
             Level lastplayed = null;
@@ -59,23 +59,12 @@ namespace The_Stella_Game
             }
             return lastplayed;
         }
-
-        
-
         public void ResetAllLevels()
         {
             foreach(Level level in Levels) { level.Played = false; }
         }
 
-        public void ResetLastLevel()
-        {
-            Level level = this.GetLastPlayedLevel();
-
-            if (level == null) return;
-            else level.Load();
-        }
-
-        public void ChangeLevel()
+        public void ChangeLevel(double coins)
         {
             if (!(menu is GameMenu)) return;
 
@@ -91,11 +80,14 @@ namespace The_Stella_Game
             }
             else
             {
+                level.PlaySong();
                 gameMenu.CurrentLevel = level;
                 gameMenu.CurrentLevel.Load();
-                gameMenu.CurrentLevel.PlaySong();
+                gameMenu.CurrentLevel.StellaPlayer.Coins = coins;
             }
         }
+
+        #endregion
 
         public void ChangeMenu(Menu menu)
         {
@@ -104,21 +96,11 @@ namespace The_Stella_Game
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
-            
             Levels.Add(new Level1(this, Content));
             Levels.Add(new Level2(this, Content));
             Levels.Add(new EndLevel(this, Content));
 
-
             menu = new StartMenu(this, _graphics, Content);
-
-            //for (int i = 0; i < 2; i++) { Levels[i].Played = true; }
-
-            //GameMenu gameMenu = new GameMenu(this, _graphics, Content);
-            //gameMenu.CurrentLevel = Levels[2];
-            //this.menu = gameMenu;
 
             base.Initialize();
         }
@@ -126,13 +108,10 @@ namespace The_Stella_Game
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
         {
-            // TODO: Add your update logic here
             menu.Update(gameTime);
 
             base.Update(gameTime);
@@ -144,7 +123,6 @@ namespace The_Stella_Game
 
             _spriteBatch.Begin();
 
-            // TODO: Add your drawing code here
             menu.Draw(gameTime, _spriteBatch);
 
             _spriteBatch.End();

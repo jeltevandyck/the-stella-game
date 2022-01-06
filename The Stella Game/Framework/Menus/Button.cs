@@ -9,6 +9,7 @@ using The_Stella_Game.Framework;
 
 namespace The_Stella_Game.Framework
 {
+    //Source - Github Oyyou: https://github.com/Oyyou/MonoGame_Tutorials/blob/master/MonoGame_Tutorials/
     public class Button : IGObject
     {
         private MouseState currentState;
@@ -19,21 +20,16 @@ namespace The_Stella_Game.Framework
         public Vector2 Position { get; private set; }
         public bool Clicked { get; private set; }
 
-        public Rectangle Rectangle
-        {
-            get
-            {
-                return new Rectangle((int)Position.X, (int)Position.Y, texture.Width, texture.Height);
-            }
-        }
+        public CollisionBox CollisionBox;
         public Button(ContentManager content, string sheet, Vector2 spawnPosition)
         {
             this.texture = content.Load<Texture2D>("Sprites\\Button\\" + sheet);
             this.Position = spawnPosition;
+            this.CollisionBox = new CollisionBox(Position, texture.Width, texture.Height);
         }
         public virtual void Draw(GameTime gameTime, SpriteBatch spritebatch)
         {
-            spritebatch.Draw(texture, Rectangle, Color.White);
+            spritebatch.Draw(texture, CollisionBox.Box, Color.White);
         }
 
         public virtual void Update(GameTime gameTime, List<IGObject> gObjects)
@@ -43,13 +39,9 @@ namespace The_Stella_Game.Framework
 
             var mouseRectangle = new Rectangle(currentState.X, currentState.Y, 1, 1);
 
-            if (mouseRectangle.Intersects(Rectangle))
+            if (mouseRectangle.Intersects(CollisionBox.Box))
             {
-                if (currentState.LeftButton == ButtonState.Released && previousState.LeftButton == ButtonState.Pressed)
-                {
-                    Click?.Invoke(this, new EventArgs());
-
-                }
+                if (currentState.LeftButton == ButtonState.Released && previousState.LeftButton == ButtonState.Pressed)  Click?.Invoke(this, new EventArgs());
             }
         }
     }
