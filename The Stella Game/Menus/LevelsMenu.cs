@@ -35,6 +35,7 @@ namespace The_Stella_Game.Menus
         {
             GameMenu menu = new GameMenu(Game, Graphics, Content);
             menu.CurrentLevel = Game1.GetInstance().Levels[0];
+            menu.CurrentLevel.Load();
             Game.ChangeMenu(menu);
         }
 
@@ -42,6 +43,7 @@ namespace The_Stella_Game.Menus
         {
             GameMenu menu = new GameMenu(Game, Graphics, Content);
             menu.CurrentLevel = Game1.GetInstance().Levels[1];
+            menu.CurrentLevel.Load();
             Game.ChangeMenu(menu);
         }
 

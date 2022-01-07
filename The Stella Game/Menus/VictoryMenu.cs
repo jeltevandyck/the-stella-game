@@ -39,7 +39,11 @@ namespace The_Stella_Game.Menus
 
         private void restartButton_Click(object sender, EventArgs e)
         {
-            Game.ChangeMenu(new GameMenu(Game, Graphics, Content));
+            GameMenu menu = new GameMenu(Game, Graphics, Content);
+            menu.CurrentLevel = Game.GetLastPlayedLevel();
+            menu.CurrentLevel.Load();
+            menu.CurrentLevel.PlaySong();
+            Game.ChangeMenu(menu);
         }
     }
 }

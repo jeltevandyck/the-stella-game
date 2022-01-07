@@ -68,6 +68,8 @@ namespace The_Stella_Game
         {
             if (!(menu is GameMenu)) return;
 
+            MediaPlayer.Stop();
+
             GameMenu gameMenu = menu as GameMenu;
             gameMenu.CurrentLevel.Played = true;
 
@@ -80,9 +82,9 @@ namespace The_Stella_Game
             }
             else
             {
-                level.PlaySong();
                 gameMenu.CurrentLevel = level;
                 gameMenu.CurrentLevel.Load();
+                gameMenu.CurrentLevel.PlaySong();
                 gameMenu.CurrentLevel.StellaPlayer.Coins = coins;
             }
         }

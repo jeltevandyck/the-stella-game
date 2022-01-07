@@ -18,9 +18,6 @@ namespace The_Stella_Game.Menus
         
         public GameMenu(Game1 game, GraphicsDeviceManager graphics, ContentManager content) : base(game, graphics, content)
         {
-            CurrentLevel = Game1.GetInstance().GetLastPlayedLevel();
-            CurrentLevel.Load();
-            CurrentLevel.PlaySong();
         }
 
         public override void Update(GameTime gameTime)

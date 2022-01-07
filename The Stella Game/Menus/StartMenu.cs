@@ -40,12 +40,15 @@ namespace The_Stella_Game.Menus
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            Game.ChangeMenu(new GameMenu(Game, Graphics, Content));
+            GameMenu menu = new GameMenu(Game, Graphics, Content);
+            menu.CurrentLevel = Game1.GetInstance().GetLastPlayedLevel();
+            menu.CurrentLevel.Load();
+            menu.CurrentLevel.PlaySong();
+            Game.ChangeMenu(menu);
         }
 
         public override void Update(GameTime gameTime)
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Enter)) Game.ChangeMenu(new GameMenu(Game, Graphics, Content));
             if (Keyboard.GetState().IsKeyDown(Keys.Escape)) System.Environment.Exit(0);
 
             base.Update(gameTime);

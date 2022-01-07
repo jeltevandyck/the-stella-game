@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 using The_Stella_Game.Framework;
+using Microsoft.Xna.Framework.Media;
 
 namespace The_Stella_Game.Framework
 {
@@ -28,6 +29,8 @@ namespace The_Stella_Game.Framework
             Content = content;
 
             SpriteObjects = new List<IGObject>();
+
+            MediaPlayer.Stop();
         }
 
         public virtual void Update(GameTime gameTime)
